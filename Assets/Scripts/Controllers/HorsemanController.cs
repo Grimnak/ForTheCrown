@@ -21,12 +21,12 @@ namespace Capstone
 
             unitType = "Horseman";
             healAmount = 0;
-            attackDamage = 33;
-            defaultAttackDamage = 33;
+            attackDamage = 30;
+            defaultAttackDamage = 30;
             defaultMovementRange = 4;
             currentMovementRange = 4;
-            totalHealth = 75;
-            currentHealth = 75;
+            totalHealth = 85;
+            currentHealth = 85;
             isAlive = true;
             attackRange = 1;
             defaultAttackRange = 1;
@@ -34,7 +34,7 @@ namespace Capstone
             chargingSpeed = 10;
             hasActed = false;
             remainingSpecialAbilityCooldown = 0;
-            totalSpecialAbilityCooldown = 4;
+            totalSpecialAbilityCooldown = 2;
             currentPromotionPoints = 0;
             requiredPromotionPoints = 7;
             maxPromotions = 3;
@@ -103,7 +103,7 @@ namespace Capstone
         }
 
         /// <summary>
-        /// This method is called when a horsemane attacks.  Decides whether to use moving attack or stationary attack.
+        /// This method is called when a horseman attacks.  Decides whether to use moving attack or stationary attack.
         /// </summary>
         public override void Attack()
         {
@@ -131,7 +131,7 @@ namespace Capstone
                 currentDirection = Vector3.Normalize(currentDirection);
 
                 //determine if we are using the special attack coroutine, or the regular attack coroutine
-                if(attackRange ==1){
+                if(attackRange == 1){
                     StartCoroutine("StationaryAttack");
                 }
                 else

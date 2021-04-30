@@ -25,8 +25,8 @@ namespace Capstone
             healAmount = 0;
             defaultMovementRange = 1;
             currentMovementRange = 1;
-            totalHealth = 50;
-            currentHealth = 50;
+            totalHealth = 60;
+            currentHealth = 60;
             isAlive = true;
             attackRange = 6;
             defaultAttackRange = 6;
@@ -34,7 +34,7 @@ namespace Capstone
             chargingSpeed = 10;
             hasActed = false;
             remainingSpecialAbilityCooldown = 2;
-            totalSpecialAbilityCooldown = 3;
+            totalSpecialAbilityCooldown = 2;
             currentPromotionPoints = 0;
             requiredPromotionPoints = 2;
             maxPromotions = 3;

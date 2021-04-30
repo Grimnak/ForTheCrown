@@ -20,8 +20,8 @@ namespace Capstone
 
             unitType = "Knight";
             healAmount = 0;
-            attackDamage = 33;
-            defaultAttackDamage = 33;
+            attackDamage = 30;
+            defaultAttackDamage = 30;
             defaultMovementRange = 2;
             currentMovementRange = 2;
             totalHealth = 100;
@@ -33,7 +33,7 @@ namespace Capstone
             chargingSpeed = 10;
             hasActed = false;
             remainingSpecialAbilityCooldown = 0;
-            totalSpecialAbilityCooldown = 4;
+            totalSpecialAbilityCooldown = 3;
             currentPromotionPoints = 0;
             requiredPromotionPoints = 7;
             maxPromotions = 3;
