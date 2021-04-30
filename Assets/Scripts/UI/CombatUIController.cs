@@ -81,15 +81,6 @@ namespace Capstone
                 {
                     turnEndBtnTxt.text = "End Turn";
                 }
-
-                //Cheat code for test
-                if (Input.GetKeyDown(KeyCode.Alpha9))
-                {
-                    if (selectedUnitController)
-                    {
-                        selectedUnitController.currentPromotionPoints += selectedUnitController.requiredPromotionPoints;
-                    }
-                }
             }
             else if (GameLogicManager.Instance.PCsAreReady)
             {      

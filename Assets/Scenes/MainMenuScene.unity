@@ -3112,6 +3112,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365612801}
   m_CullTransparentMesh: 1
+--- !u!114 &1375690205 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4401956712222683531, guid: 709695e6cfbcacc468c11af658906056, type: 3}
+  m_PrefabInstance: {fileID: 4401956712067265383}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1479501769
 GameObject:
   m_ObjectHideFlags: 0
@@ -8939,6 +8950,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1605695482}
+    - target: {fileID: 4401956712222683531, guid: 709695e6cfbcacc468c11af658906056, type: 3}
+      propertyPath: m_Text
+      value: 'Objective:
+
+        Defend the sacred well.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4401956712406243646, guid: 709695e6cfbcacc468c11af658906056, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartEndlessLevel
@@ -9004,6 +9021,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4401956713467160696, guid: 709695e6cfbcacc468c11af658906056, type: 3}
+      propertyPath: mapObjective
+      value: 
+      objectReference: {fileID: 1375690205}
+    - target: {fileID: 4401956713467160696, guid: 709695e6cfbcacc468c11af658906056, type: 3}
       propertyPath: maps.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -9011,6 +9032,22 @@ PrefabInstance:
       propertyPath: maps.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: 0af89a5fa6dacbe418258468b44d9e94, type: 3}
+    - target: {fileID: 4401956713467160696, guid: 709695e6cfbcacc468c11af658906056, type: 3}
+      propertyPath: mapObjectives.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401956713467160696, guid: 709695e6cfbcacc468c11af658906056, type: 3}
+      propertyPath: mapObjectives.Array.data[0]
+      value: 'Objective:  Defend the sacred well.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401956713467160696, guid: 709695e6cfbcacc468c11af658906056, type: 3}
+      propertyPath: mapObjectives.Array.data[1]
+      value: 'Objective:  Storm the bridge.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401956713467160696, guid: 709695e6cfbcacc468c11af658906056, type: 3}
+      propertyPath: mapObjectives.Array.data[2]
+      value: Objective:TBD.
+      objectReference: {fileID: 0}
     - target: {fileID: 4401956713467160702, guid: 709695e6cfbcacc468c11af658906056, type: 3}
       propertyPath: m_IsActive
       value: 0

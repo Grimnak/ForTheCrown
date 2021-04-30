@@ -527,6 +527,5 @@ namespace Capstone
             resultsScript = ResultsUIPanel.GetComponent<ResultsPanelScript>();
             return resultsScript;
         }
-
     }
 }

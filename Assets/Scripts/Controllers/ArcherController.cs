@@ -7,6 +7,7 @@
  */
 
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
@@ -31,7 +32,6 @@ namespace Capstone
             movementSpeed = 7;
             chargingSpeed = 10;
             hasActed = false;
-
             remainingSpecialAbilityCooldown = 0;
             totalSpecialAbilityCooldown = 2;
             currentPromotionPoints = 0;
@@ -95,9 +95,8 @@ namespace Capstone
                 FindObjectOfType<AudioManager>()?.Play("ArrowNoise");
 
             }
-            else{
-
-                
+            else
+            {
                 //allows targettile to last throughout entire IEnumerator
                 // GameObject temporaryTargetTile = TileManager.currentlyTargetedTile;
 
@@ -106,10 +105,9 @@ namespace Capstone
                 ParticleSystem enemyUPS = target.transform.Find("Explosive_Effect").GetComponent<ParticleSystem>();
 
                 //list of units affected by the explosion
-                GameObject[] listOfUnits= new GameObject[9];
-                int i =0;
+                List<GameObject> adjacentUnitList = new List<GameObject>();
 
-                // If firing explosive shot, damage all adjacent enemies to primary target as well.
+                // If firing explosive shot, damage all enemies adjacent to primary target as well.
                 if (remainingSpecialAbilityCooldown == totalSpecialAbilityCooldown)
                 {
                     animator.SetTrigger("Special");
@@ -125,24 +123,21 @@ namespace Capstone
                             GameObject unit = TileManager.FindSpecificChildByTag(candidateTile, "Unit");
                             if (unit != null)
                             {
-                                listOfUnits[i] = unit;
-                                i++;            
+                                adjacentUnitList.Add(unit); 
                             }
                         }
                     }
 
-                    
                     yield return new WaitForSeconds(1.5f);
 
-                    //iterate through and damage all nearby enemies for half damage
-                    int j = 0;
-                    while (j<i){
-                        listOfUnits[j].GetComponent<UnitController>().Attacked(CalculateDamage(attackDamage / 2));
-                        j++;
-                    }
-                    
-                    //damage main target for full damage
+                    // Primary target takes full damage.
                     temporaryTarget.GetComponent<UnitController>().Attacked(CalculateDamage(attackDamage));
+
+                    // All units adjacent to primary target take half damage.
+                    foreach (GameObject unit in adjacentUnitList)
+                    {
+                        unit.GetComponent<UnitController>().Attacked(CalculateDamage(attackDamage / 2));
+                    }
 
                     //handles bow and fire explosion sounds
                     yield return new WaitForSeconds(.2f);

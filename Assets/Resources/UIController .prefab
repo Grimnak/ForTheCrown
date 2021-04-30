@@ -2025,7 +2025,8 @@ MonoBehaviour:
   multiplayerCanvas: {fileID: 4401956712784498871}
   endlessCanvas: {fileID: 4401956713467160702}
   levelButtonsCanvas: {fileID: 7014725365373140015}
-  newGameDialog: {fileID: 7664535861099373085}
+  levelNewGameDialog: {fileID: 0}
+  endlessNewGameDialog: {fileID: 0}
   settingDialog: {fileID: 3975366067586603778}
   audioManager: {fileID: 0}
   volumeText: {fileID: 7760262571020183097}
@@ -4699,7 +4700,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4401956712752084192}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4711,7 +4712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -350, y: 0}
+  m_AnchoredPosition: {x: -350.00006, y: 0}
   m_SizeDelta: {x: 699, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4401956712752084205

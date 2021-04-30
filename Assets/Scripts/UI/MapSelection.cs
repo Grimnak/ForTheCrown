@@ -12,7 +12,9 @@ public class MapSelection : MonoBehaviour
     [SerializeField] private GameObject returnBtn;
     [SerializeField] private GameObject previewPanel;
     [SerializeField] private Image mapPreview;
+    [SerializeField] private Text mapObjective;
     [SerializeField] private Sprite[] maps;
+    [SerializeField] private string[] mapObjectives;
     public Animator mpAnimator;
     private int mapIndex;
 
@@ -44,6 +46,7 @@ public class MapSelection : MonoBehaviour
     private void SelectMap(int idx)
     {
         mapPreview.sprite = maps[idx - 1]; // idx is 1-indexed, not 0-indexed. think level 1, 2, 3 etc.
+        mapObjective.text = mapObjectives[idx - 1];
         mapIndex = idx;
     }
 

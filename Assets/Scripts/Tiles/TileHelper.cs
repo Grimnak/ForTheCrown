@@ -242,7 +242,7 @@ namespace Capstone
         /// <summary>
         /// This coroutine handles a siege's rock falling on a tile.
         /// </summary>
-        /// <param name="listIndex">The index in the active shot siege list, representing a tuple containing the specific siege unit and its attack damage.</param>
+        /// <param name="listIndex">The index in the active shot siege list, representing a triple containing the specific siege unit, its attack damage, and allegiance.</param>
         public IEnumerator RockFall(int listIndex)
         {
             bool actuallyHit = false;
@@ -283,12 +283,16 @@ namespace Capstone
                 }
             }
 
+            // Handle promotions.
             if (activeShotSiegeList[listIndex].Item1 != null && actuallyHit)
             {
-                activeShotSiegeList[listIndex].Item1.GetComponent<UnitController>().currentPromotionPoints += 2;
+                UnitController siegeUC = activeShotSiegeList[listIndex].Item1.GetComponent<UnitController>();
+
+                siegeUC.currentPromotionPoints += 2;
                 
-                //if unit has enough points to promote, and unit is not at max promotions
-                if(activeShotSiegeList[listIndex].Item1.GetComponent<UnitController>().currentPromotionPoints >= activeShotSiegeList[listIndex].Item1.GetComponent<UnitController>().requiredPromotionPoints  && activeShotSiegeList[listIndex].Item1.GetComponent<UnitController>().totalPromotions <= activeShotSiegeList[listIndex].Item1.GetComponent<UnitController>().maxPromotions){
+                // If unit has enough points to promote, and unit is not at max promotions, then display promotion particle effect.
+                if (siegeUC.currentPromotionPoints >= siegeUC.requiredPromotionPoints && siegeUC.totalPromotions <= siegeUC.maxPromotions)
+                {
                     ParticleSystem pPS = activeShotSiegeList[listIndex].Item1.transform.Find("Promotion_Effect").GetComponent<ParticleSystem>();
                     pPS.Play();
                 }
