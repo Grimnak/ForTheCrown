@@ -1,0 +1,8 @@
+Would it be convenient to have a list auto generated when installing an asset?
+
+Machine learning: Cost is too cheap for that
+
+
+
+When an asset has been approved, does it go through that process again when it is updated?
+

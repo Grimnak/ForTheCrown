@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Map
+  - Selected Tile
+  - Active Tile
+  - Inactive Tile
+  - Ground
+  - Unit
+  - Undefined
+  - Select Indicator
+  - Reticle
+  - Occupied
+  - Board
+  - PopuItem
+  - ItemPool
+  - Path Indicator
+  - StateDrivenCam
+  - 0
+  - 1
+  - Staging
+  - Staging Tile
+  - Structure
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - FogEffect
+  - Water
+  - UI
+  - TopUI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2687536531
+    locked: 0
+  - name: TopUI
+    uniqueID: 672264391
+    locked: 0

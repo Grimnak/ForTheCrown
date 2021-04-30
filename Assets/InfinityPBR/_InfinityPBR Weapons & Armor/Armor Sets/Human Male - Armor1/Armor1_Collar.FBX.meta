@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: a5debda896b7c7a4da3046de7683f88c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Base HumanHead
+    100004: Base HumanJaw
+    100006: Base HumanLCalf
+    100008: Base HumanLCollarbone
+    100010: Base HumanLFingerIndexL1
+    100012: Base HumanLFingerIndexL2
+    100014: Base HumanLFingerIndexL3
+    100016: Base HumanLFingerL1
+    100018: Base HumanLFingerL2
+    100020: Base HumanLFingerL3
+    100022: Base HumanLFingerPinkieL1
+    100024: Base HumanLFingerPinkieL2
+    100026: Base HumanLFingerPinkieL3
+    100028: Base HumanLFingerRingL1
+    100030: Base HumanLFingerRingL2
+    100032: Base HumanLFingerRingL3
+    100034: Base HumanLFoot
+    100036: Base HumanLForearm1
+    100038: Base HumanLForearm2
+    100040: Base HumanLForearm3
+    100042: Base HumanLPalm
+    100044: Base HumanLThigh1
+    100046: Base HumanLThigh2
+    100048: Base HumanLThumbL1
+    100050: Base HumanLThumbL2
+    100052: Base HumanLThumbL3
+    100054: Base HumanLToe11
+    100056: Base HumanLUpperarm1
+    100058: Base HumanLUpperarm2
+    100060: Base HumanNeck
+    100062: Base HumanPelvis
+    100064: Base HumanRCalf
+    100066: Base HumanRCollarbone
+    100068: Base HumanRFingerIndexR1
+    100070: Base HumanRFingerIndexR2
+    100072: Base HumanRFingerIndexR3
+    100074: Base HumanRFingerPinkieR1
+    100076: Base HumanRFingerPinkieR2
+    100078: Base HumanRFingerPinkieR3
+    100080: Base HumanRFingerR1
+    100082: Base HumanRFingerR2
+    100084: Base HumanRFingerR3
+    100086: Base HumanRFingerRingR1
+    100088: Base HumanRFingerRingR2
+    100090: Base HumanRFingerRingR3
+    100092: Base HumanRFoot
+    100094: Base HumanRForearm1
+    100096: Base HumanRForearm2
+    100098: Base HumanRForearm3
+    100100: Base HumanRibcage
+    100102: Base HumanRPalm
+    100104: Base HumanRThigh1
+    100106: Base HumanRThigh2
+    100108: Base HumanRThumbR1
+    100110: Base HumanRThumbR2
+    100112: Base HumanRThumbR3
+    100114: Base HumanRToe11
+    100116: Base HumanRUpperarm1
+    100118: Base HumanRUpperarm2
+    100120: Base HumanSheathRig
+    100122: Base HumanSpine1
+    100124: Base HumanSpine2
+    100126: Base HumanSpine3
+    100128: BoneRoot
+    100130: Leather1_Collar
+    100132: Armor1_Collar
+    100134: Base HumanTassetRig1
+    100136: Base HumanTassetRig2
+    100138: DaggerBone
+    100140: HandBoneL
+    100142: HandBoneR
+    100144: ShieldBoneL
+    100146: ShieldBoneR
+    400000: //RootNode
+    400002: Base HumanHead
+    400004: Base HumanJaw
+    400006: Base HumanLCalf
+    400008: Base HumanLCollarbone
+    400010: Base HumanLFingerIndexL1
+    400012: Base HumanLFingerIndexL2
+    400014: Base HumanLFingerIndexL3
+    400016: Base HumanLFingerL1
+    400018: Base HumanLFingerL2
+    400020: Base HumanLFingerL3
+    400022: Base HumanLFingerPinkieL1
+    400024: Base HumanLFingerPinkieL2
+    400026: Base HumanLFingerPinkieL3
+    400028: Base HumanLFingerRingL1
+    400030: Base HumanLFingerRingL2
+    400032: Base HumanLFingerRingL3
+    400034: Base HumanLFoot
+    400036: Base HumanLForearm1
+    400038: Base HumanLForearm2
+    400040: Base HumanLForearm3
+    400042: Base HumanLPalm
+    400044: Base HumanLThigh1
+    400046: Base HumanLThigh2
+    400048: Base HumanLThumbL1
+    400050: Base HumanLThumbL2
+    400052: Base HumanLThumbL3
+    400054: Base HumanLToe11
+    400056: Base HumanLUpperarm1
+    400058: Base HumanLUpperarm2
+    400060: Base HumanNeck
+    400062: Base HumanPelvis
+    400064: Base HumanRCalf
+    400066: Base HumanRCollarbone
+    400068: Base HumanRFingerIndexR1
+    400070: Base HumanRFingerIndexR2
+    400072: Base HumanRFingerIndexR3
+    400074: Base HumanRFingerPinkieR1
+    400076: Base HumanRFingerPinkieR2
+    400078: Base HumanRFingerPinkieR3
+    400080: Base HumanRFingerR1
+    400082: Base HumanRFingerR2
+    400084: Base HumanRFingerR3
+    400086: Base HumanRFingerRingR1
+    400088: Base HumanRFingerRingR2
+    400090: Base HumanRFingerRingR3
+    400092: Base HumanRFoot
+    400094: Base HumanRForearm1
+    400096: Base HumanRForearm2
+    400098: Base HumanRForearm3
+    400100: Base HumanRibcage
+    400102: Base HumanRPalm
+    400104: Base HumanRThigh1
+    400106: Base HumanRThigh2
+    400108: Base HumanRThumbR1
+    400110: Base HumanRThumbR2
+    400112: Base HumanRThumbR3
+    400114: Base HumanRToe11
+    400116: Base HumanRUpperarm1
+    400118: Base HumanRUpperarm2
+    400120: Base HumanSheathRig
+    400122: Base HumanSpine1
+    400124: Base HumanSpine2
+    400126: Base HumanSpine3
+    400128: BoneRoot
+    400130: Leather1_Collar
+    400132: Armor1_Collar
+    400134: Base HumanTassetRig1
+    400136: Base HumanTassetRig2
+    400138: DaggerBone
+    400140: HandBoneL
+    400142: HandBoneR
+    400144: ShieldBoneL
+    400146: ShieldBoneR
+    2100000: leather1_set
+    4300000: Leather1_Collar
+    4300002: Armor1_Collar
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Leather1_Collar
+    13700002: Armor1_Collar
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: a1979b9cba1644f26ac6a1c70c304576
+timeCreated: 1544938352
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Leather3_Main1
+    100004: Leather3_Main2
+    100006: Leather3_Main3
+    100008: Leather3_Pauldron_L1
+    100010: Leather3_Pauldron_L2
+    100012: Leather3_Pauldron_L3
+    100014: Leather3_Pauldron_R1
+    100016: Leather3_Pauldron_R2
+    100018: Leather3_Pauldron_R3
+    400000: //RootNode
+    400002: Leather3_Main1
+    400004: Leather3_Main2
+    400006: Leather3_Main3
+    400008: Leather3_Pauldron_L1
+    400010: Leather3_Pauldron_L2
+    400012: Leather3_Pauldron_L3
+    400014: Leather3_Pauldron_R1
+    400016: Leather3_Pauldron_R2
+    400018: Leather3_Pauldron_R3
+    2300000: Leather3_Main1
+    2300002: Leather3_Main2
+    2300004: Leather3_Main3
+    2300006: Leather3_Pauldron_L1
+    2300008: Leather3_Pauldron_L2
+    2300010: Leather3_Pauldron_L3
+    2300012: Leather3_Pauldron_R1
+    2300014: Leather3_Pauldron_R2
+    2300016: Leather3_Pauldron_R3
+    3300000: Leather3_Main1
+    3300002: Leather3_Main2
+    3300004: Leather3_Main3
+    3300006: Leather3_Pauldron_L1
+    3300008: Leather3_Pauldron_L2
+    3300010: Leather3_Pauldron_L3
+    3300012: Leather3_Pauldron_R1
+    3300014: Leather3_Pauldron_R2
+    3300016: Leather3_Pauldron_R3
+    4300000: Leather3_Main1
+    4300002: Leather3_Main2
+    4300004: Leather3_Main3
+    4300006: Leather3_Pauldron_L1
+    4300008: Leather3_Pauldron_L2
+    4300010: Leather3_Pauldron_L3
+    4300012: Leather3_Pauldron_R1
+    4300014: Leather3_Pauldron_R2
+    4300016: Leather3_Pauldron_R3
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leather3_set
+    second: {fileID: 2100000, guid: 97b6d0ee843d7404bb07c4dbce7b53c3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

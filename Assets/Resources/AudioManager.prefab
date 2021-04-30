@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4505921536215708975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4505921536215708969}
+  - component: {fileID: 4505921536215708968}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4505921536215708969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505921536215708975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4505921536215708968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505921536215708975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ce45173e79a84cab0011b421d13a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: LoadingBackground
+    clip: {fileID: 8300000, guid: 63577b8e8453f9848b369a7f554634be, type: 3}
+    volume: 0.1
+    source: {fileID: 0}
+    loop: 0
+  - name: MainMenuMusic
+    clip: {fileID: 8300000, guid: 4e5a52d5577df0842bd8972319be92dc, type: 3}
+    volume: 0.1
+    source: {fileID: 0}
+    loop: 1
+  - name: MainMenuKeyPress
+    clip: {fileID: 8300000, guid: 370abf303f5137442b9369d862e35e90, type: 3}
+    volume: 0.1
+    source: {fileID: 0}
+    loop: 0
+  - name: LevelButtonClick
+    clip: {fileID: 8300000, guid: 8b6f4d06fc020ec43b7a1f4fcf33d5f7, type: 3}
+    volume: 0.1
+    source: {fileID: 0}
+    loop: 0
+  - name: LevelSelectNoise
+    clip: {fileID: 8300000, guid: 2c59f6df11335c145a6f9aa6711eb085, type: 3}
+    volume: 0.1
+    source: {fileID: 0}
+    loop: 0
+  - name: LevelMusic
+    clip: {fileID: 8300000, guid: 5f175328e56770047ae1ad0a2d243e5d, type: 3}
+    volume: 0.1
+    source: {fileID: 0}
+    loop: 1
+  - name: ScreenshotIndicator
+    clip: {fileID: 8300000, guid: 43afa923731971a4cba1dedce7d98cd8, type: 3}
+    volume: 0.1
+    source: {fileID: 0}
+    loop: 0
+  - name: ExitScreenMusic
+    clip: {fileID: 8300000, guid: 5995bcbfa66caad48b6b500a1d1818ae, type: 3}
+    volume: 0.1
+    source: {fileID: 0}
+    loop: 0
+  - name: BowNoise
+    clip: {fileID: 8300000, guid: 8fd2d73dfe9e846679cfdf508258512f, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: ArrowNoise
+    clip: {fileID: 8300000, guid: 5318c0c653ad54db7be081c1a391547e, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: HealNoise
+    clip: {fileID: 8300000, guid: 304d546b80cae47fb872be812b98b2c8, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: DefendNoise
+    clip: {fileID: 8300000, guid: f08ce2b0c20924bfe844560b4770fe5a, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: SwordNoise
+    clip: {fileID: 8300000, guid: ebcbb664018f947728cb9b67468b0f48, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: StabNoise
+    clip: {fileID: 8300000, guid: 4ae4fe17d19c04e10920bfaca3bd8290, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: StaffNoise
+    clip: {fileID: 8300000, guid: e1a75776f005439469f89a17a986c567, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: RockFallNoise
+    clip: {fileID: 8300000, guid: 7b69beceabbd8f24e8bc62d77ac7ca1c, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: CatapultNoise
+    clip: {fileID: 8300000, guid: b00de8b0db7d6f843861ee8807da249f, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: FireNoise
+    clip: {fileID: 8300000, guid: 8a44b12d3e3f24b1a89dc7f0b66756f4, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0
+  - name: NeighNoise
+    clip: {fileID: 8300000, guid: 60c0b7783112943c78229e1941fc423d, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    loop: 0

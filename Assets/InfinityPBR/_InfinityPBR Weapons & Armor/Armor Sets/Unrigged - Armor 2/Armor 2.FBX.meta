@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 62f2815e6ca194bf4b2faa2eb7a43cfe
+timeCreated: 1544938352
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Leather2_Big_Belt
+    100004: Leather2_Chest_Fur
+    100006: Leather2_Gorget
+    100008: Leather2_Main1
+    100010: Leather2_Neckbelts
+    100012: Leather2_Pauldron_Fur_L
+    100014: Leather2_Pauldron_Fur_R
+    100016: Leather2_Pauldron_L1
+    100018: Leather2_Pauldron_L2
+    100020: Leather2_Pauldron_R1
+    100022: Leather2_Pauldron_R2
+    100024: Leather2_Tabbard
+    100026: Leather2_Thighs_Fur_L
+    100028: Leather2_Thighs_Fur_R
+    100030: Leather2_Thighs_L1
+    100032: Leather2_Thighs_L2
+    100034: Leather2_Thighs_L3
+    100036: Leather2_Thighs_L4
+    100038: Leather2_Thighs_L5
+    100040: Leather2_Thighs_R1
+    100042: Leather2_Thighs_R2
+    100044: Leather2_Thighs_R3
+    100046: Leather2_Thighs_R4
+    100048: Leather2_Thighs_R5
+    100050: Leather2_Waist_Belts
+    100052: Leather2_Waist_Fur
+    100054: Leather2_Waistwrap
+    400000: //RootNode
+    400002: Leather2_Big_Belt
+    400004: Leather2_Chest_Fur
+    400006: Leather2_Gorget
+    400008: Leather2_Main1
+    400010: Leather2_Neckbelts
+    400012: Leather2_Pauldron_Fur_L
+    400014: Leather2_Pauldron_Fur_R
+    400016: Leather2_Pauldron_L1
+    400018: Leather2_Pauldron_L2
+    400020: Leather2_Pauldron_R1
+    400022: Leather2_Pauldron_R2
+    400024: Leather2_Tabbard
+    400026: Leather2_Thighs_Fur_L
+    400028: Leather2_Thighs_Fur_R
+    400030: Leather2_Thighs_L1
+    400032: Leather2_Thighs_L2
+    400034: Leather2_Thighs_L3
+    400036: Leather2_Thighs_L4
+    400038: Leather2_Thighs_L5
+    400040: Leather2_Thighs_R1
+    400042: Leather2_Thighs_R2
+    400044: Leather2_Thighs_R3
+    400046: Leather2_Thighs_R4
+    400048: Leather2_Thighs_R5
+    400050: Leather2_Waist_Belts
+    400052: Leather2_Waist_Fur
+    400054: Leather2_Waistwrap
+    2300000: Leather2_Big_Belt
+    2300002: Leather2_Chest_Fur
+    2300004: Leather2_Gorget
+    2300006: Leather2_Main1
+    2300008: Leather2_Neckbelts
+    2300010: Leather2_Pauldron_Fur_L
+    2300012: Leather2_Pauldron_Fur_R
+    2300014: Leather2_Pauldron_L1
+    2300016: Leather2_Pauldron_L2
+    2300018: Leather2_Pauldron_R1
+    2300020: Leather2_Pauldron_R2
+    2300022: Leather2_Tabbard
+    2300024: Leather2_Thighs_Fur_L
+    2300026: Leather2_Thighs_Fur_R
+    2300028: Leather2_Thighs_L1
+    2300030: Leather2_Thighs_L2
+    2300032: Leather2_Thighs_L3
+    2300034: Leather2_Thighs_L4
+    2300036: Leather2_Thighs_L5
+    2300038: Leather2_Thighs_R1
+    2300040: Leather2_Thighs_R2
+    2300042: Leather2_Thighs_R3
+    2300044: Leather2_Thighs_R4
+    2300046: Leather2_Thighs_R5
+    2300048: Leather2_Waist_Belts
+    2300050: Leather2_Waist_Fur
+    2300052: Leather2_Waistwrap
+    3300000: Leather2_Big_Belt
+    3300002: Leather2_Chest_Fur
+    3300004: Leather2_Gorget
+    3300006: Leather2_Main1
+    3300008: Leather2_Neckbelts
+    3300010: Leather2_Pauldron_Fur_L
+    3300012: Leather2_Pauldron_Fur_R
+    3300014: Leather2_Pauldron_L1
+    3300016: Leather2_Pauldron_L2
+    3300018: Leather2_Pauldron_R1
+    3300020: Leather2_Pauldron_R2
+    3300022: Leather2_Tabbard
+    3300024: Leather2_Thighs_Fur_L
+    3300026: Leather2_Thighs_Fur_R
+    3300028: Leather2_Thighs_L1
+    3300030: Leather2_Thighs_L2
+    3300032: Leather2_Thighs_L3
+    3300034: Leather2_Thighs_L4
+    3300036: Leather2_Thighs_L5
+    3300038: Leather2_Thighs_R1
+    3300040: Leather2_Thighs_R2
+    3300042: Leather2_Thighs_R3
+    3300044: Leather2_Thighs_R4
+    3300046: Leather2_Thighs_R5
+    3300048: Leather2_Waist_Belts
+    3300050: Leather2_Waist_Fur
+    3300052: Leather2_Waistwrap
+    4300000: Leather2_Thighs_L4
+    4300002: Leather2_Thighs_R4
+    4300004: Leather2_Main1
+    4300006: Leather2_Waist_Fur
+    4300008: Leather2_Chest_Fur
+    4300010: Leather2_Big_Belt
+    4300012: Leather2_Waistwrap
+    4300014: Leather2_Waist_Belts
+    4300016: Leather2_Tabbard
+    4300018: Leather2_Gorget
+    4300020: Leather2_Neckbelts
+    4300022: Leather2_Pauldron_R1
+    4300024: Leather2_Pauldron_R2
+    4300026: Leather2_Pauldron_Fur_R
+    4300028: Leather2_Pauldron_Fur_L
+    4300030: Leather2_Pauldron_L1
+    4300032: Leather2_Pauldron_L2
+    4300034: Leather2_Thighs_L5
+    4300036: Leather2_Thighs_R5
+    4300038: Leather2_Thighs_Fur_R
+    4300040: Leather2_Thighs_Fur_L
+    4300042: Leather2_Thighs_R3
+    4300044: Leather2_Thighs_R2
+    4300046: Leather2_Thighs_R1
+    4300048: Leather2_Thighs_L3
+    4300050: Leather2_Thighs_L2
+    4300052: Leather2_Thighs_L1
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fur_set
+    second: {fileID: 2100000, guid: 1ed1f8e842a5341b5857528350b83550, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leather2_set
+    second: {fileID: 2100000, guid: 79611e6c1b0fd48bbb31c36ffedf827b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

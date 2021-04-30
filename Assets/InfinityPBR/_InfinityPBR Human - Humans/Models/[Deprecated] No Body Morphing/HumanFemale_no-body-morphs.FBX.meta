@@ -1,0 +1,590 @@
+fileFormatVersion: 2
+guid: e7b3cb05af6df41018f4fb013699f0a4
+timeCreated: 1512101479
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Base HumanBrow_L1
+    100002: Base HumanBrow_L2
+    100004: Base HumanBrow_L3
+    100006: Base HumanBrow_R1
+    100008: Base HumanBrow_R2
+    100010: Base HumanBrow_R3
+    100012: Base HumanHair01
+    100014: Base HumanHair02
+    100016: Base HumanHair03
+    100018: Base HumanHair04
+    100020: Base HumanHair05
+    100022: Base HumanHair06
+    100024: Base HumanHair07
+    100026: Base HumanHair08
+    100028: Base HumanHair09
+    100030: Base HumanHair10
+    100032: Base HumanHair11
+    100034: Base HumanHair12
+    100036: Base HumanHair13
+    100038: Base HumanHair14
+    100040: Base HumanHair15
+    100042: Base HumanHair16
+    100044: Base HumanHair17
+    100046: Base HumanHair18
+    100048: Base HumanHair19
+    100050: Base HumanHair20
+    100052: Base HumanHair21
+    100054: Base HumanHair22
+    100056: Base HumanHair23
+    100058: Base HumanHair24
+    100060: Base HumanHair25
+    100062: Base HumanHair26
+    100064: Base HumanHair27
+    100066: Base HumanHair28
+    100068: Base HumanHair29
+    100070: Base HumanHair30
+    100072: Base HumanHair31
+    100074: Base HumanHair32
+    100076: Base HumanHair33
+    100078: Base HumanHair34
+    100080: Base HumanHair35
+    100082: Base HumanHair36
+    100084: Base HumanHair37
+    100086: Base HumanHair38
+    100088: Base HumanHair39
+    100090: Base HumanHair40
+    100092: Base HumanHair41
+    100094: Base HumanHair42
+    100096: Base HumanHair43
+    100098: Base HumanHair44
+    100100: Base HumanHair45
+    100102: Base HumanHair46
+    100104: Base HumanHair47
+    100106: Base HumanHair48
+    100108: Base HumanHair49
+    100110: Base HumanHair50
+    100112: Base HumanHair51
+    100114: Base HumanHair52
+    100116: Base HumanHair53
+    100118: Base HumanHair54
+    100120: Base HumanHair55
+    100122: Base HumanHead
+    100124: Base HumanJaw
+    100126: Base HumanLCalf
+    100128: Base HumanLCollarbone
+    100130: Base HumanLFingerIndexL1
+    100132: Base HumanLFingerIndexL2
+    100134: Base HumanLFingerIndexL3
+    100136: Base HumanLFingerL1
+    100138: Base HumanLFingerL2
+    100140: Base HumanLFingerL3
+    100142: Base HumanLFingerPinkieL1
+    100144: Base HumanLFingerPinkieL2
+    100146: Base HumanLFingerPinkieL3
+    100148: Base HumanLFingerRingL1
+    100150: Base HumanLFingerRingL2
+    100152: Base HumanLFingerRingL3
+    100154: Base HumanLFoot
+    100156: Base HumanLForearm1
+    100158: Base HumanLForearm2
+    100160: Base HumanLForearm3
+    100162: Base HumanLPalm
+    100164: Base HumanLThigh1
+    100166: Base HumanLThigh2
+    100168: Base HumanLThumbL1
+    100170: Base HumanLThumbL2
+    100172: Base HumanLThumbL3
+    100174: Base HumanLToe11
+    100176: Base HumanLUpperarm1
+    100178: Base HumanLUpperarm2
+    100180: Base HumanNeck
+    100182: Base HumanPelvis
+    100184: Base HumanPonytail1
+    100186: Base HumanPonytail10
+    100188: Base HumanPonytail2
+    100190: Base HumanPonytail3
+    100192: Base HumanPonytail4
+    100194: Base HumanPonytail5
+    100196: Base HumanPonytail6
+    100198: Base HumanPonytail7
+    100200: Base HumanPonytail8
+    100202: Base HumanPonytail9
+    100204: Base HumanRCalf
+    100206: Base HumanRCollarbone
+    100208: Base HumanRFingerIndexR1
+    100210: Base HumanRFingerIndexR2
+    100212: Base HumanRFingerIndexR3
+    100214: Base HumanRFingerPinkieR1
+    100216: Base HumanRFingerPinkieR2
+    100218: Base HumanRFingerPinkieR3
+    100220: Base HumanRFingerR1
+    100222: Base HumanRFingerR2
+    100224: Base HumanRFingerR3
+    100226: Base HumanRFingerRingR1
+    100228: Base HumanRFingerRingR2
+    100230: Base HumanRFingerRingR3
+    100232: Base HumanRFoot
+    100234: Base HumanRForearm1
+    100236: Base HumanRForearm2
+    100238: Base HumanRForearm3
+    100240: Base HumanRibcage
+    100242: Base HumanRPalm
+    100244: Base HumanRThigh1
+    100246: Base HumanRThigh2
+    100248: Base HumanRThumbR1
+    100250: Base HumanRThumbR2
+    100252: Base HumanRThumbR3
+    100254: Base HumanRToe11
+    100256: Base HumanRUpperarm1
+    100258: Base HumanRUpperarm2
+    100260: Base HumanSheathRig
+    100262: Base HumanSpine1
+    100264: Base HumanSpine2
+    100266: Base HumanSpine3
+    100268: Base HumanTassetRig1
+    100270: Base HumanTassetRig2
+    100272: BoneRoot
+    100274: DaggerBone
+    100276: DaggerHipPoint
+    100278: Dummy001
+    100280: EyeL
+    100282: EyelidBottomL
+    100284: EyelidBottomR
+    100286: EyelidTopL
+    100288: EyelidTopR
+    100290: EyePointL
+    100292: EyePointR
+    100294: EyeR
+    100296: F_Armband_L
+    100298: F_Armband_R
+    100300: F_Barbute
+    100302: F_Belt_Sheathe
+    100304: F_Boot_Flaps_L
+    100306: F_Boot_Flaps_R
+    100308: F_Boot_L
+    100310: F_Boot_R
+    100312: F_Bracer_L
+    100314: F_Bracer_R
+    100316: F_Cloth_Tasset
+    100318: F_Couter_L
+    100320: F_Couter_R
+    100322: F_Dagger
+    100324: F_Dagger_Pouch
+    100326: F_Faulds
+    100328: F_Gauntlet_L
+    100330: F_Gauntlet_R
+    100332: F_Gladiator_Belt
+    100334: F_Glove_L
+    100336: F_Glove_R
+    100338: F_Kneepad_L
+    100340: F_Kneepad_R
+    100342: F_Manica
+    100344: F_Pauldron_L
+    100346: F_Pauldron_R
+    100348: F_Poleyn_L
+    100350: F_Poleyn_R
+    100352: F_Pteruges
+    100354: F_Sabatons_L
+    100356: F_Sabatons_R
+    100358: F_Schynbalds_L
+    100360: F_Schynbalds_R
+    100362: F_Skirt
+    100364: F_Spaulder_Chest
+    100366: F_Spaulder_L
+    100368: F_Spaulder_R
+    100370: F_Trousers
+    100372: F_Undergarment_Bottom_A
+    100374: F_Undergarment_Bottom_B
+    100376: F_Undergarment_Top
+    100378: F_Vambrace_L
+    100380: F_Vambrace_R
+    100382: Female_Body
+    100384: Female_Eyebrows
+    100386: Female_Eyes_A
+    100388: Female_Eyes_Reflect_A
+    100390: Hair_Female_Long
+    100392: Hair_Female_Ponytail
+    100394: Hair_Female_Short
+    100396: HandBoneL
+    100398: HandBoneR
+    100400: //RootNode
+    100402: ShieldBoneL
+    100404: ShieldBoneR
+    400000: Base HumanBrow_L1
+    400002: Base HumanBrow_L2
+    400004: Base HumanBrow_L3
+    400006: Base HumanBrow_R1
+    400008: Base HumanBrow_R2
+    400010: Base HumanBrow_R3
+    400012: Base HumanHair01
+    400014: Base HumanHair02
+    400016: Base HumanHair03
+    400018: Base HumanHair04
+    400020: Base HumanHair05
+    400022: Base HumanHair06
+    400024: Base HumanHair07
+    400026: Base HumanHair08
+    400028: Base HumanHair09
+    400030: Base HumanHair10
+    400032: Base HumanHair11
+    400034: Base HumanHair12
+    400036: Base HumanHair13
+    400038: Base HumanHair14
+    400040: Base HumanHair15
+    400042: Base HumanHair16
+    400044: Base HumanHair17
+    400046: Base HumanHair18
+    400048: Base HumanHair19
+    400050: Base HumanHair20
+    400052: Base HumanHair21
+    400054: Base HumanHair22
+    400056: Base HumanHair23
+    400058: Base HumanHair24
+    400060: Base HumanHair25
+    400062: Base HumanHair26
+    400064: Base HumanHair27
+    400066: Base HumanHair28
+    400068: Base HumanHair29
+    400070: Base HumanHair30
+    400072: Base HumanHair31
+    400074: Base HumanHair32
+    400076: Base HumanHair33
+    400078: Base HumanHair34
+    400080: Base HumanHair35
+    400082: Base HumanHair36
+    400084: Base HumanHair37
+    400086: Base HumanHair38
+    400088: Base HumanHair39
+    400090: Base HumanHair40
+    400092: Base HumanHair41
+    400094: Base HumanHair42
+    400096: Base HumanHair43
+    400098: Base HumanHair44
+    400100: Base HumanHair45
+    400102: Base HumanHair46
+    400104: Base HumanHair47
+    400106: Base HumanHair48
+    400108: Base HumanHair49
+    400110: Base HumanHair50
+    400112: Base HumanHair51
+    400114: Base HumanHair52
+    400116: Base HumanHair53
+    400118: Base HumanHair54
+    400120: Base HumanHair55
+    400122: Base HumanHead
+    400124: Base HumanJaw
+    400126: Base HumanLCalf
+    400128: Base HumanLCollarbone
+    400130: Base HumanLFingerIndexL1
+    400132: Base HumanLFingerIndexL2
+    400134: Base HumanLFingerIndexL3
+    400136: Base HumanLFingerL1
+    400138: Base HumanLFingerL2
+    400140: Base HumanLFingerL3
+    400142: Base HumanLFingerPinkieL1
+    400144: Base HumanLFingerPinkieL2
+    400146: Base HumanLFingerPinkieL3
+    400148: Base HumanLFingerRingL1
+    400150: Base HumanLFingerRingL2
+    400152: Base HumanLFingerRingL3
+    400154: Base HumanLFoot
+    400156: Base HumanLForearm1
+    400158: Base HumanLForearm2
+    400160: Base HumanLForearm3
+    400162: Base HumanLPalm
+    400164: Base HumanLThigh1
+    400166: Base HumanLThigh2
+    400168: Base HumanLThumbL1
+    400170: Base HumanLThumbL2
+    400172: Base HumanLThumbL3
+    400174: Base HumanLToe11
+    400176: Base HumanLUpperarm1
+    400178: Base HumanLUpperarm2
+    400180: Base HumanNeck
+    400182: Base HumanPelvis
+    400184: Base HumanPonytail1
+    400186: Base HumanPonytail10
+    400188: Base HumanPonytail2
+    400190: Base HumanPonytail3
+    400192: Base HumanPonytail4
+    400194: Base HumanPonytail5
+    400196: Base HumanPonytail6
+    400198: Base HumanPonytail7
+    400200: Base HumanPonytail8
+    400202: Base HumanPonytail9
+    400204: Base HumanRCalf
+    400206: Base HumanRCollarbone
+    400208: Base HumanRFingerIndexR1
+    400210: Base HumanRFingerIndexR2
+    400212: Base HumanRFingerIndexR3
+    400214: Base HumanRFingerPinkieR1
+    400216: Base HumanRFingerPinkieR2
+    400218: Base HumanRFingerPinkieR3
+    400220: Base HumanRFingerR1
+    400222: Base HumanRFingerR2
+    400224: Base HumanRFingerR3
+    400226: Base HumanRFingerRingR1
+    400228: Base HumanRFingerRingR2
+    400230: Base HumanRFingerRingR3
+    400232: Base HumanRFoot
+    400234: Base HumanRForearm1
+    400236: Base HumanRForearm2
+    400238: Base HumanRForearm3
+    400240: Base HumanRibcage
+    400242: Base HumanRPalm
+    400244: Base HumanRThigh1
+    400246: Base HumanRThigh2
+    400248: Base HumanRThumbR1
+    400250: Base HumanRThumbR2
+    400252: Base HumanRThumbR3
+    400254: Base HumanRToe11
+    400256: Base HumanRUpperarm1
+    400258: Base HumanRUpperarm2
+    400260: Base HumanSheathRig
+    400262: Base HumanSpine1
+    400264: Base HumanSpine2
+    400266: Base HumanSpine3
+    400268: Base HumanTassetRig1
+    400270: Base HumanTassetRig2
+    400272: BoneRoot
+    400274: DaggerBone
+    400276: DaggerHipPoint
+    400278: Dummy001
+    400280: EyeL
+    400282: EyelidBottomL
+    400284: EyelidBottomR
+    400286: EyelidTopL
+    400288: EyelidTopR
+    400290: EyePointL
+    400292: EyePointR
+    400294: EyeR
+    400296: F_Armband_L
+    400298: F_Armband_R
+    400300: F_Barbute
+    400302: F_Belt_Sheathe
+    400304: F_Boot_Flaps_L
+    400306: F_Boot_Flaps_R
+    400308: F_Boot_L
+    400310: F_Boot_R
+    400312: F_Bracer_L
+    400314: F_Bracer_R
+    400316: F_Cloth_Tasset
+    400318: F_Couter_L
+    400320: F_Couter_R
+    400322: F_Dagger
+    400324: F_Dagger_Pouch
+    400326: F_Faulds
+    400328: F_Gauntlet_L
+    400330: F_Gauntlet_R
+    400332: F_Gladiator_Belt
+    400334: F_Glove_L
+    400336: F_Glove_R
+    400338: F_Kneepad_L
+    400340: F_Kneepad_R
+    400342: F_Manica
+    400344: F_Pauldron_L
+    400346: F_Pauldron_R
+    400348: F_Poleyn_L
+    400350: F_Poleyn_R
+    400352: F_Pteruges
+    400354: F_Sabatons_L
+    400356: F_Sabatons_R
+    400358: F_Schynbalds_L
+    400360: F_Schynbalds_R
+    400362: F_Skirt
+    400364: F_Spaulder_Chest
+    400366: F_Spaulder_L
+    400368: F_Spaulder_R
+    400370: F_Trousers
+    400372: F_Undergarment_Bottom_A
+    400374: F_Undergarment_Bottom_B
+    400376: F_Undergarment_Top
+    400378: F_Vambrace_L
+    400380: F_Vambrace_R
+    400382: Female_Body
+    400384: Female_Eyebrows
+    400386: Female_Eyes_A
+    400388: Female_Eyes_Reflect_A
+    400390: Hair_Female_Long
+    400392: Hair_Female_Ponytail
+    400394: Hair_Female_Short
+    400396: HandBoneL
+    400398: HandBoneR
+    400400: //RootNode
+    400402: ShieldBoneL
+    400404: ShieldBoneR
+    4300000: Female_Eyes_A
+    4300002: Female_Eyes_Reflect_A
+    4300004: Female_Eyebrows
+    4300006: F_Undergarment_Bottom_B
+    4300008: F_Undergarment_Top
+    4300010: F_Undergarment_Bottom_A
+    4300012: F_Armband_L
+    4300014: F_Armband_R
+    4300016: F_Belt_Sheathe
+    4300018: F_Boot_Flaps_L
+    4300020: F_Boot_Flaps_R
+    4300022: F_Boot_L
+    4300024: F_Boot_R
+    4300026: F_Bracer_L
+    4300028: F_Bracer_R
+    4300030: F_Cloth_Tasset
+    4300032: F_Couter_L
+    4300034: F_Couter_R
+    4300036: F_Dagger
+    4300038: F_Dagger_Pouch
+    4300040: F_Faulds
+    4300042: F_Gauntlet_L
+    4300044: F_Gauntlet_R
+    4300046: F_Gladiator_Belt
+    4300048: F_Glove_L
+    4300050: F_Glove_R
+    4300052: F_Kneepad_L
+    4300054: F_Kneepad_R
+    4300056: F_Poleyn_L
+    4300058: F_Poleyn_R
+    4300060: F_Pteruges
+    4300062: F_Sabatons_L
+    4300064: F_Sabatons_R
+    4300066: F_Schynbalds_L
+    4300068: F_Schynbalds_R
+    4300070: F_Skirt
+    4300072: F_Trousers
+    4300074: F_Vambrace_L
+    4300076: F_Vambrace_R
+    4300078: F_Barbute
+    4300080: F_Manica
+    4300082: F_Pauldron_L
+    4300084: F_Pauldron_R
+    4300086: F_Spaulder_Chest
+    4300088: F_Spaulder_L
+    4300090: F_Spaulder_R
+    4300092: Hair_Female_Long
+    4300094: Hair_Female_Ponytail
+    4300096: Hair_Female_Short
+    4300098: Female_Body
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: F_Armband_L
+    13700002: F_Armband_R
+    13700004: F_Barbute
+    13700006: F_Belt_Sheathe
+    13700008: F_Boot_Flaps_L
+    13700010: F_Boot_Flaps_R
+    13700012: F_Boot_L
+    13700014: F_Boot_R
+    13700016: F_Bracer_L
+    13700018: F_Bracer_R
+    13700020: F_Cloth_Tasset
+    13700022: F_Couter_L
+    13700024: F_Couter_R
+    13700026: F_Dagger
+    13700028: F_Dagger_Pouch
+    13700030: F_Faulds
+    13700032: F_Gauntlet_L
+    13700034: F_Gauntlet_R
+    13700036: F_Gladiator_Belt
+    13700038: F_Glove_L
+    13700040: F_Glove_R
+    13700042: F_Kneepad_L
+    13700044: F_Kneepad_R
+    13700046: F_Manica
+    13700048: F_Pauldron_L
+    13700050: F_Pauldron_R
+    13700052: F_Poleyn_L
+    13700054: F_Poleyn_R
+    13700056: F_Pteruges
+    13700058: F_Sabatons_L
+    13700060: F_Sabatons_R
+    13700062: F_Schynbalds_L
+    13700064: F_Schynbalds_R
+    13700066: F_Skirt
+    13700068: F_Spaulder_Chest
+    13700070: F_Spaulder_L
+    13700072: F_Spaulder_R
+    13700074: F_Trousers
+    13700076: F_Undergarment_Bottom_A
+    13700078: F_Undergarment_Bottom_B
+    13700080: F_Undergarment_Top
+    13700082: F_Vambrace_L
+    13700084: F_Vambrace_R
+    13700086: Female_Body
+    13700088: Female_Eyebrows
+    13700090: Female_Eyes_A
+    13700092: Female_Eyes_Reflect_A
+    13700094: Hair_Female_Long
+    13700096: Hair_Female_Ponytail
+    13700098: Hair_Female_Short
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

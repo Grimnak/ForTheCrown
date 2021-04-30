@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: ef6ccfc99f25ecd4da6225053f635882
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Armor2_Waist_FurMain
+    100004: Base HumanHead
+    100006: Base HumanJaw
+    100008: Base HumanLCalf
+    100010: Base HumanLCollarbone
+    100012: Base HumanLFingerIndexL1
+    100014: Base HumanLFingerIndexL2
+    100016: Base HumanLFingerIndexL3
+    100018: Base HumanLFingerL1
+    100020: Base HumanLFingerL2
+    100022: Base HumanLFingerL3
+    100024: Base HumanLFingerPinkieL1
+    100026: Base HumanLFingerPinkieL2
+    100028: Base HumanLFingerPinkieL3
+    100030: Base HumanLFingerRingL1
+    100032: Base HumanLFingerRingL2
+    100034: Base HumanLFingerRingL3
+    100036: Base HumanLFoot
+    100038: Base HumanLForearm1
+    100040: Base HumanLForearm2
+    100042: Base HumanLForearm3
+    100044: Base HumanLPalm
+    100046: Base HumanLThigh1
+    100048: Base HumanLThigh2
+    100050: Base HumanLThumbL1
+    100052: Base HumanLThumbL2
+    100054: Base HumanLThumbL3
+    100056: Base HumanLToe11
+    100058: Base HumanLUpperarm1
+    100060: Base HumanLUpperarm2
+    100062: Base HumanNeck
+    100064: Base HumanPelvis
+    100066: Base HumanRCalf
+    100068: Base HumanRCollarbone
+    100070: Base HumanRFingerIndexR1
+    100072: Base HumanRFingerIndexR2
+    100074: Base HumanRFingerIndexR3
+    100076: Base HumanRFingerPinkieR1
+    100078: Base HumanRFingerPinkieR2
+    100080: Base HumanRFingerPinkieR3
+    100082: Base HumanRFingerR1
+    100084: Base HumanRFingerR2
+    100086: Base HumanRFingerR3
+    100088: Base HumanRFingerRingR1
+    100090: Base HumanRFingerRingR2
+    100092: Base HumanRFingerRingR3
+    100094: Base HumanRFoot
+    100096: Base HumanRForearm1
+    100098: Base HumanRForearm2
+    100100: Base HumanRForearm3
+    100102: Base HumanRibcage
+    100104: Base HumanRPalm
+    100106: Base HumanRThigh1
+    100108: Base HumanRThigh2
+    100110: Base HumanRThumbR1
+    100112: Base HumanRThumbR2
+    100114: Base HumanRThumbR3
+    100116: Base HumanRToe11
+    100118: Base HumanRUpperarm1
+    100120: Base HumanRUpperarm2
+    100122: Base HumanSpine1
+    100124: Base HumanSpine2
+    100126: Base HumanSpine3
+    100128: Base HumanTassetRig1
+    100130: BoneRoot
+    400000: //RootNode
+    400002: Armor2_Waist_FurMain
+    400004: Base HumanHead
+    400006: Base HumanJaw
+    400008: Base HumanLCalf
+    400010: Base HumanLCollarbone
+    400012: Base HumanLFingerIndexL1
+    400014: Base HumanLFingerIndexL2
+    400016: Base HumanLFingerIndexL3
+    400018: Base HumanLFingerL1
+    400020: Base HumanLFingerL2
+    400022: Base HumanLFingerL3
+    400024: Base HumanLFingerPinkieL1
+    400026: Base HumanLFingerPinkieL2
+    400028: Base HumanLFingerPinkieL3
+    400030: Base HumanLFingerRingL1
+    400032: Base HumanLFingerRingL2
+    400034: Base HumanLFingerRingL3
+    400036: Base HumanLFoot
+    400038: Base HumanLForearm1
+    400040: Base HumanLForearm2
+    400042: Base HumanLForearm3
+    400044: Base HumanLPalm
+    400046: Base HumanLThigh1
+    400048: Base HumanLThigh2
+    400050: Base HumanLThumbL1
+    400052: Base HumanLThumbL2
+    400054: Base HumanLThumbL3
+    400056: Base HumanLToe11
+    400058: Base HumanLUpperarm1
+    400060: Base HumanLUpperarm2
+    400062: Base HumanNeck
+    400064: Base HumanPelvis
+    400066: Base HumanRCalf
+    400068: Base HumanRCollarbone
+    400070: Base HumanRFingerIndexR1
+    400072: Base HumanRFingerIndexR2
+    400074: Base HumanRFingerIndexR3
+    400076: Base HumanRFingerPinkieR1
+    400078: Base HumanRFingerPinkieR2
+    400080: Base HumanRFingerPinkieR3
+    400082: Base HumanRFingerR1
+    400084: Base HumanRFingerR2
+    400086: Base HumanRFingerR3
+    400088: Base HumanRFingerRingR1
+    400090: Base HumanRFingerRingR2
+    400092: Base HumanRFingerRingR3
+    400094: Base HumanRFoot
+    400096: Base HumanRForearm1
+    400098: Base HumanRForearm2
+    400100: Base HumanRForearm3
+    400102: Base HumanRibcage
+    400104: Base HumanRPalm
+    400106: Base HumanRThigh1
+    400108: Base HumanRThigh2
+    400110: Base HumanRThumbR1
+    400112: Base HumanRThumbR2
+    400114: Base HumanRThumbR3
+    400116: Base HumanRToe11
+    400118: Base HumanRUpperarm1
+    400120: Base HumanRUpperarm2
+    400122: Base HumanSpine1
+    400124: Base HumanSpine2
+    400126: Base HumanSpine3
+    400128: Base HumanTassetRig1
+    400130: BoneRoot
+    2100000: fur_set
+    4300000: Armor2_Waist_FurMain
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Armor2_Waist_FurMain
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fur_set
+    second: {fileID: 2100000, guid: a1d9b31a43d41413eaac03fc26935e68, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

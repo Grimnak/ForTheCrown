@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 456e7774f230a82439158a29dc9d71ae
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playableTilePrefab: {fileID: 7628297138076231169, guid: 636dc27bc45c2f348a8ea6042fa5312a, type: 3}
+  - stagingTilePrefab: {fileID: 8032520698492042335, guid: d77b3a7ab3ac8da4db2cd90152bfc781, type: 3}
+  - attackRangeStructurePrefab: {fileID: 1754807239305838, guid: 54f1dc7d0583518458409f646bc07b7b, type: 3}
+  - movementRangeStructurePrefab: {fileID: 1584465629103710, guid: 73ae0508808d714459e2aa5d36813e20, type: 3}
+  - healingStructurePrefab: {fileID: 1627831869796182, guid: 2623e517692a66544b3cca918936f103, type: 3}
+  - obstaclePrefab: {fileID: 4806180512529421133, guid: a27eaddbcf3efc54b920b286d0769d0e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

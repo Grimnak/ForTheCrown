@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3253099920166263494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3253099920166263512}
+  - component: {fileID: 3253099920166263513}
+  m_Layer: 0
+  m_Name: _AIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3253099920166263512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253099920166263494}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.269802, y: 22.429842, z: 33.57061}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3253099920166263513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253099920166263494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58afe47591cb6a34f9b6b3f5819609f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerID: 0
+  stagingArmy: []
+  stagingArea: {fileID: 0}
+  knightPrefab: {fileID: 6075176696039927759, guid: 619848885ff421b4ebd56a883428f0f5, type: 3}
+  archerPrefab: {fileID: 2534365405716630496, guid: 9a8d69d5a99eb554b9a2fb4ca41d5375, type: 3}
+  clericPrefab: {fileID: 1721927384801898794, guid: 17841364f4fd74844a2625d013849dc6, type: 3}
+  siegePrefab: {fileID: 4332912780931096989, guid: e4f5fe0823fa7354991b5fd559f14674, type: 3}
+  horsePrefab: {fileID: 2362245304955413638, guid: d32d6220a8ec9824d9abb505787beccf, type: 3}
