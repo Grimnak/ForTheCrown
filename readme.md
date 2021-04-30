@@ -112,11 +112,11 @@ In order to occupy a structure, a player must have the greatest number of units 
 
 **Well**
 
-- Once occupying this structure, all adjacent units in the occupying army receive a turn-based heal.
+- All adjacent units in the occupying army receive a turn-based heal.
 
 **Junk**
 
-- The 4th structure. Represented by a piles of inanimate objects, this structure simply takes up space on the game board. Units must traverse around this structure.
+- Represented by a piles of inanimate objects, this structure simply takes up space on the game board. Units must traverse around this structure.
 
 # Personnel
 ---
