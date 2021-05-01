@@ -332,7 +332,7 @@ namespace Capstone
             }
             
             UpdataStatus();
-            FindObjectOfType<AudioManager>()?.Play("MainMenuKeyPress");
+            if (GameLogicManager.Instance.controllerIDWithControl == GameLogicManager.Instance.myID) FindObjectOfType<AudioManager>()?.Play("LevelSelectNoise");
             ParticleSystem pPS = transform.Find("Promotion_Effect").GetComponent<ParticleSystem>();
             pPS.Stop();
         }

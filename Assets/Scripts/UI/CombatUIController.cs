@@ -314,7 +314,7 @@ namespace Capstone
 
         private void setUpTexts()
         {
-            healingStructInfo = "Healing Well\n\nProvides +10 health to all units in the player's army who are adjacent to the well at the conclusion of their turn.";
+            healingStructInfo = "Healing Well\n\nProvides +15 health to two random units in the player's army who are adjacent to the well at the conclusion of their turn.";
             attackRangeStructInfo = "Tower\n\nProvides +1 attack range for each ranged unit in the occupying army when controlled.\nControl is gained if, at the start of the player's turn, the player has more units adjacent to the tower than the opponent.";
             movementRangeStructInfo = "Castle\n\nProvides +1 movement range for each melee unit in the occupying army when controlled.\nControl is gained if, at the start of the player's turn, the player has more units adjacent to the castle than the opponent.";
             obstacleInfo = "Obstacle\n\nInhibits unit movement.  Ranged attacks may pass over obstacles.";

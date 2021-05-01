@@ -251,7 +251,8 @@ namespace Capstone
                     UnitController uc = gameArmy[Random.Range(0, gameArmy.Count)].GetComponent<UnitController>();
                     if (uc.totalPromotions < uc.maxPromotions)
                     {
-                        uc.PromoteStatsOption();      
+                        uc.PromoteStatsOption();
+                        uc.currentHealth = uc.totalHealth;
                         AIEndlessPromPts--;
                     }
                 }

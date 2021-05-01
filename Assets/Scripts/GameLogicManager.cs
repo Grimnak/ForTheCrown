@@ -208,9 +208,9 @@ namespace Capstone
             if (inEndlessMode && (controllers[1] as AIController).gameArmy.Count == 0)
             {
                 endlessWaveClearCount++;
-                endlessPopulationPoints += endlessWaveClearCount % 2 == 0 ? 2 : 0;
+                endlessPopulationPoints += 1;
 
-                if (endlessPopulationPoints > 0)
+                if (endlessPopulationPoints > 1)
                 {
                     PlayerController pc = controllers[0] as PlayerController;
                     isReadyToPlay = false;
@@ -236,7 +236,7 @@ namespace Capstone
             for (int unit = 0; unit < controllers[controllerIDWithControl].gameArmy.Count; unit++)
             {
                 UnitController unitController = controllers[controllerIDWithControl].gameArmy[unit].GetComponent<UnitController>();
-                //start the healing particle system on the target
+                //stop the healing particle system on the target
                 ParticleSystem tPS = unitController.transform.Find("Healing_Particles").GetComponent<ParticleSystem>();
                 tPS.Stop();
             }
@@ -244,35 +244,52 @@ namespace Capstone
         }
 
         /// <summary>
-        /// At the conclusion of the player's turn, all of their units adjacent to a healing structure receive healing.
+        /// At the conclusion of the player's turn, two of their units adjacent to a healing structure receive healing (chosen randomly).
         /// </summary>
         [PunRPC]
         public void HealingStructureHeal()
         {
+            List<UnitController> healableUnits = new List<UnitController>();
+            int previouslyChosenIndex = -1;
+
+            // Find and store all eligible units for receiving a heal from the well.
             for (int unit = 0; unit < controllers[controllerIDWithControl].gameArmy.Count; unit++)
             {
                 UnitController unitController = controllers[controllerIDWithControl].gameArmy[unit].GetComponent<UnitController>();
 
-                // Any friendly units adjacent to a healing structure receive their heal now.
                 int healingStructureLocation = Global.LookUpActiveMapHealingStructureLocation();
                 if (healingStructureLocation != -1 && TileManager.CombatDistanceBetweenTiles(unitController.transform.parent.gameObject, LevelGenerator.map.transform.GetChild(healingStructureLocation).gameObject) == 1)
                 {
-                    ParticleSystem tPS = unitController.transform.Find("Healing_Particles").GetComponent<ParticleSystem>();
-                    tPS.Play();
-                    if (unitController.currentHealth > 0)
-                    {
-                        unitController.currentHealth += 10;
-
-                        if (unitController.currentHealth > unitController.totalHealth)
-                        {
-                            unitController.currentHealth = unitController.totalHealth;
-                        }
-
-                        unitController.healthBarController.SetCurrentHealth(unitController.currentHealth);
-                    }
+                    healableUnits.Add(unitController);
                 }
             }
 
+            // Randomly select two of the eligible units to heal.
+            for (int healNumber = 0; healNumber < Mathf.Min(2, healableUnits.Count); healNumber++)
+            {
+                int unitIndex = Random.Range(0, healableUnits.Count);
+                while (unitIndex == previouslyChosenIndex)
+                {
+                    unitIndex = Random.Range(0, healableUnits.Count);
+                }
+                previouslyChosenIndex = unitIndex;
+
+                ParticleSystem tPS = healableUnits[unitIndex].transform.Find("Healing_Particles").GetComponent<ParticleSystem>();
+                tPS.Play();
+                if (healableUnits[unitIndex].currentHealth > 0)
+                {
+                    healableUnits[unitIndex].currentHealth += 15;
+
+                    if (healableUnits[unitIndex].currentHealth > healableUnits[unitIndex].totalHealth)
+                    {
+                        healableUnits[unitIndex].currentHealth = healableUnits[unitIndex].totalHealth;
+                    }
+
+                    healableUnits[unitIndex].healthBarController.SetCurrentHealth(healableUnits[unitIndex].currentHealth);
+                }
+            }
+
+            // Stop active healing particle effects.
             StartCoroutine("StructureHealing");
         }
 
