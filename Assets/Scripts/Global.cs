@@ -55,6 +55,7 @@ namespace Capstone
             public const string inactive = "Inactive Tile";
             public const string staging = "Staging";
             public const string map = "Map";
+            public const string damage = "Damage Popup";
         }
 
         /// <summary>

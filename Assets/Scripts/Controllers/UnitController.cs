@@ -564,7 +564,11 @@ namespace Capstone
 
             while (true)
             {
-                GameObject.Find("Damage Container(Clone)").transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Vector3.up);
+                GameObject[] activeDamagePopups = GameObject.FindGameObjectsWithTag(Global.Tags.damage);
+                foreach (GameObject damagePopup in activeDamagePopups)
+                {
+                    damagePopup.transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Vector3.up);
+                }
                 yield return null;
             }
         }

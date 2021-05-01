@@ -24,6 +24,7 @@ TagManager:
   - Staging
   - Staging Tile
   - Structure
+  - Damage Popup
   layers:
   - Default
   - TransparentFX

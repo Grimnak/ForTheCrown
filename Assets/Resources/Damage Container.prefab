@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 3461041448275391900}
   m_Layer: 0
   m_Name: Damage Container
-  m_TagString: Untagged
+  m_TagString: Damage Popup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
