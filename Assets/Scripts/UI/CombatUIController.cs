@@ -271,8 +271,8 @@ namespace Capstone
             else return;
         }
 
-        /// <summary>Communicate promotions across the network</summary>
-        /// <param name="unitParent">The tile which the unit is bound to</param>
+        /// <summary>Communicate promotions across the network.</summary>
+        /// <param name="unitParent">The tile to which the unit is bound.</param>
         [PunRPC]
         public void IssuePromotion(string unitParent, int x)
         {

@@ -19,8 +19,8 @@ namespace Capstone
             base.Start();
 
             unitType = "Cleric";
-            attackDamage = 20;
-            defaultAttackDamage = 20;
+            attackDamage = 15;
+            defaultAttackDamage = 15;
             defaultMovementRange = 2;
             currentMovementRange = 2;
             totalHealth = 60;

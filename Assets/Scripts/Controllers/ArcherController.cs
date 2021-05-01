@@ -24,8 +24,8 @@ namespace Capstone
             defaultAttackDamage = 25;
             defaultMovementRange = 2;
             currentMovementRange = 2;
-            totalHealth = 75;
-            currentHealth = 75;
+            totalHealth = 60;
+            currentHealth = 60;
             isAlive = true;
             attackRange = 3;
             defaultAttackRange = 3;
@@ -33,9 +33,9 @@ namespace Capstone
             chargingSpeed = 10;
             hasActed = false;
             remainingSpecialAbilityCooldown = 0;
-            totalSpecialAbilityCooldown = 2;
+            totalSpecialAbilityCooldown = 3;
             currentPromotionPoints = 0;
-            requiredPromotionPoints = 7;
+            requiredPromotionPoints = 10;
             maxPromotions = 3;
             totalPromotions = 0;
             attackAudio = "BowNoise";

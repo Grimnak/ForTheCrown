@@ -112,10 +112,10 @@ namespace Capstone
         public struct UnitPopulationCost
         {
             public const int knight = 2;
-            public const int archer = 2;
+            public const int archer = 3;
             public const int cleric = 3;
             public const int horseman = 3;
-            public const int siege = 4;
+            public const int siege = 3;
         }
 
         /// <summary>

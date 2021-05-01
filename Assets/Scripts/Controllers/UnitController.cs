@@ -332,6 +332,7 @@ namespace Capstone
             }
             
             UpdataStatus();
+            FindObjectOfType<AudioManager>()?.Play("MainMenuKeyPress");
             ParticleSystem pPS = transform.Find("Promotion_Effect").GetComponent<ParticleSystem>();
             pPS.Stop();
         }
