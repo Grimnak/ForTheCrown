@@ -93,7 +93,7 @@ public class UIController : MonoBehaviour
         }
     }
 
-    private void ClickSound()
+    public void ClickSound()
     {
         GetComponent<AudioSource>().Play();
     }

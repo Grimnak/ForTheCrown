@@ -102,7 +102,7 @@ namespace Capstone
 
                 //allows target to last throughout entire IENUMERATOR
                 GameObject temporaryTarget = target;
-                ParticleSystem enemyUPS = target.transform.Find("Explosive_Effect").GetComponent<ParticleSystem>();
+                ParticleSystem enemyUPS = target.transform.Find("Explosive_Effect")?.GetComponent<ParticleSystem>();
 
                 //list of units affected by the explosion
                 List<GameObject> adjacentUnitList = new List<GameObject>();
@@ -149,8 +149,11 @@ namespace Capstone
                     yield return new WaitForSeconds(.1f);
 
                     //play explosive effect
-                    enemyUPS.Play();
-                    yield return new WaitForSeconds(.1f);
+                    if (enemyUPS != null)
+                    {
+                        enemyUPS.Play();
+                        yield return new WaitForSeconds(.1f);
+                    }
                 }
             }
 
