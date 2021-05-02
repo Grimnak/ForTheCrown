@@ -1,6 +1,6 @@
 /* 
  * Author: Will Bartlett
- * Last Edited By:  Will Bartlett
+ * Last Edited By:  Eric Henderson
  * Date Created:  2-7-2021
  * Description:  Implements functions that allow user to use the pause menu. 
  * Filename:  PauseMenu.cs
@@ -62,6 +62,7 @@ public class PauseMenu : MonoBehaviour
             if (!PhotonNetwork.IsMasterClient) PhotonNetwork.LeaveRoom();
             NetworkManager.Instance.Disconnect();
         }
+        Cursor.lockState = CursorLockMode.None;
         UnlockAnimationLock();
         ObjectManager.ClearDDOLs();
         Global.ResetGameState();
@@ -70,6 +71,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        Cursor.lockState = CursorLockMode.None;
         UnlockAnimationLock();
         SceneManager.LoadScene(Global.exitScene);
     }

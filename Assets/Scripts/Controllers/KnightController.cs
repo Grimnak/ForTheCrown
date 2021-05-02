@@ -80,10 +80,12 @@ namespace Capstone
             currentHealth -= (int)(damageTaken * damageModifier);
             currentPromotionPoints++;
             
-                if(currentPromotionPoints >= requiredPromotionPoints && totalPromotions <= maxPromotions){
-                    ParticleSystem pPS = transform.Find("Promotion_Effect").GetComponent<ParticleSystem>();
-                    pPS.Play();
-                }
+            if (currentHealth > 0 && currentPromotionPoints >= requiredPromotionPoints && totalPromotions <= maxPromotions)
+            {
+                ParticleSystem pPS = transform.Find("Promotion_Effect").GetComponent<ParticleSystem>();
+                pPS.Play();
+            }
+
             //choose IsAttacked if unit is still alive after attack.  Choose Death if unit should die with that attack.  
             if (currentHealth <= 0 && isAlive)
             {

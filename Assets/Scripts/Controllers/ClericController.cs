@@ -81,10 +81,11 @@ namespace Capstone
             hasActed = true;
             currentPromotionPoints++;
             
-                if(currentPromotionPoints >= requiredPromotionPoints && totalPromotions <= maxPromotions){
-                    ParticleSystem pPS = transform.Find("Promotion_Effect").GetComponent<ParticleSystem>();
-                    pPS.Play();
-                }
+            if (currentPromotionPoints >= requiredPromotionPoints && totalPromotions <= maxPromotions)
+            {
+                ParticleSystem pPS = transform.Find("Promotion_Effect").GetComponent<ParticleSystem>();
+                pPS.Play();
+            }
             transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z), Vector3.up);
             currentDirection = target.transform.position - transform.position;
             currentDirection = Vector3.Normalize(currentDirection);
@@ -166,7 +167,8 @@ namespace Capstone
             {
                 currentPromotionPoints += 2;
                 
-                if(currentPromotionPoints >= requiredPromotionPoints && totalPromotions <= maxPromotions){
+                if (currentPromotionPoints >= requiredPromotionPoints && totalPromotions <= maxPromotions)
+                {
                     ParticleSystem pPS = transform.Find("Promotion_Effect").GetComponent<ParticleSystem>();
                     pPS.Play();
                 }

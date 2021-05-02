@@ -80,7 +80,7 @@ namespace Capstone
                                         uc.PromoteStatsOption();
                                     }
                                 }
-                                Move(gameArmy[i]);
+                                PerformMove(gameArmy[i]);
                                 i++;
                             }
                             else
@@ -94,7 +94,7 @@ namespace Capstone
                         {
                             if (i < gameArmy.Count)
                             {
-                                Attack(gameArmy[i]);
+                                PerformAction(gameArmy[i]);
                                 i++;
                             }
                             else
@@ -105,8 +105,11 @@ namespace Capstone
                         }
                         else 
                         {
-                            GameLogicManager.Instance.NextTurn(); // AI Turn is over.
-                            movePhase = true;
+                            if (!GameLogicManager.animationLock)
+                            {
+                                GameLogicManager.Instance.NextTurn(); // AI Turn is over.
+                                movePhase = true;
+                            }
                         }
                     }
                 }
@@ -417,7 +420,7 @@ namespace Capstone
             for (int tileIndex = 0; tileIndex < stagingArea.transform.childCount; tileIndex++)
             {
                 // North.
-                if (sideToSpawnOn == 0 && tileIndex >= stagingArea.transform.childCount - LevelGenerator.gridLength + 2)
+                if (sideToSpawnOn == 0 && tileIndex >= stagingArea.transform.childCount - (LevelGenerator.gridLength + 2))
                 {
                     eligibleTileIndices.Add(tileIndex);
                 }
@@ -459,7 +462,7 @@ namespace Capstone
             throw new System.NotImplementedException();
         }
     
-        public void Move(GameObject unit)
+        public void PerformMove(GameObject unit)
         {
             GameObject selectedTile = CalculateMoveUtility(unit);      //calculate best possible move, that move becomes selectedTile
 
@@ -476,50 +479,172 @@ namespace Capstone
             }
         }
 
-        public void Attack(GameObject unit)
+        public void PerformAction(GameObject unit)
         {
-            UnitController unitController = unit.GetComponent<UnitController>();
-            GameObject selectedTile = CalculateAttackUtility(unit);
-            if (unit.name == "Knight" && selectedTile == null && unitController.remainingSpecialAbilityCooldown == 0)
+            switch (unit.name)
             {
-                unitController.UseSpecialAbility();
-            }
-            else if (unit.name == "Archer" && unitController.remainingSpecialAbilityCooldown == 0 && selectedTile != null)
-            {
-                unitController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
-                unitController.UseSpecialAbility();
-            }
-            else if (unit.name == "Cleric" && unitController.remainingSpecialAbilityCooldown == 0 && selectedTile != null)
-            {
-                unitController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
-                unitController.UseSpecialAbility();
-                unitController.Attack();
-            }
-            else if (unit.name == "Siege" && unitController.remainingSpecialAbilityCooldown == 0 && selectedTile == null)
-            {
-                unitController.UseSpecialAbility();
-                selectedTile = CalculateAttackUtility(unit);
-                unitController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
-                unitController.Attack();
+                case "Knight":
+                    PerformKnightAction(unit);
+                    break;
+                case "Archer":
+                    PerformArcherAction(unit);
+                    break;
+                case "Cleric":
+                    PerformClericAction(unit);
+                    break;
+                case "Horseman":
+                    PerformHorsemanAction(unit);
+                    break;
+                case "Siege":
+                    PerformSiegeAction(unit);
+                    break;
+                default:
+                    break;
+            }     
+        }
 
-            }
-            else if (unit.name == "Horseman" && unitController.remainingSpecialAbilityCooldown == 0 && selectedTile == null)
+        private void PerformKnightAction(GameObject knight)
+        {
+            UnitController knightController = knight.GetComponent<UnitController>();
+            GameObject selectedTile = CalculateAttackUtility(knight);
+
+            if (knightController.remainingSpecialAbilityCooldown == 0 && selectedTile == null)
             {
-                unitController.attackRange++;
-                selectedTile = CalculateAttackUtility(unit);
-                unitController.attackRange--;
-                if (selectedTile != null)
+                int nearbyEnemyUnits = 0;
+
+                for (int enemyUnit = 0; enemyUnit < GameLogicManager.Instance.controllers[GameLogicManager.Instance.myID].gameArmy.Count; enemyUnit++)
                 {
-                    unitController.UseSpecialAbility();
-                    unitController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
-                    unitController.Attack();
+                    if (TileManager.CombatDistanceBetweenTiles(knight.transform.parent.gameObject, GameLogicManager.Instance.controllers[GameLogicManager.Instance.myID].gameArmy[enemyUnit].transform.parent.gameObject) <= 3)
+                    {
+                        nearbyEnemyUnits++;
+                    }
+                }
+
+                if (nearbyEnemyUnits > 0)
+                {
+                    knightController.UseSpecialAbility();
                 }
             }
             else if (selectedTile != null)
             {
-                unitController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
-                unitController.Attack();
-            }             
+                knightController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
+                knightController.Attack();
+            }
+        }
+
+        private void PerformArcherAction(GameObject archer)
+        {
+            UnitController archerController = archer.GetComponent<UnitController>();
+            GameObject selectedTile = CalculateAttackUtility(archer);
+
+            if (archerController.remainingSpecialAbilityCooldown == 0 && selectedTile != null)
+            {
+                int adjacentEnemyUnits = 0;
+
+                for (int enemyUnit = 0; enemyUnit < GameLogicManager.Instance.controllers[GameLogicManager.Instance.myID].gameArmy.Count; enemyUnit++)
+                {
+                    if (TileManager.CombatDistanceBetweenTiles(selectedTile, GameLogicManager.Instance.controllers[GameLogicManager.Instance.myID].gameArmy[enemyUnit].transform.parent.gameObject) == 1)
+                    {
+                        adjacentEnemyUnits++;
+                    }
+                }
+
+                if (adjacentEnemyUnits > 0)
+                {
+                    archerController.UseSpecialAbility();
+                }
+
+                archerController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
+                archerController.Attack();
+            }
+        }
+
+        private void PerformClericAction(GameObject cleric)
+        {
+            UnitController clericController = cleric.GetComponent<UnitController>();
+
+            if (clericController.remainingSpecialAbilityCooldown == 0)
+            {
+                int adjacentFriendlyInjuredUnits = 0;
+
+                for (int friendlyUnitIndex = 0; friendlyUnitIndex < GameLogicManager.Instance.controllers[GameLogicManager.Instance.otherID].gameArmy.Count; friendlyUnitIndex++)
+                {
+                    GameObject friendlyUnit = GameLogicManager.Instance.controllers[GameLogicManager.Instance.otherID].gameArmy[friendlyUnitIndex];
+                    UnitController friendlyUC = friendlyUnit.GetComponent<UnitController>();
+                    if (TileManager.CombatDistanceBetweenTiles(cleric, friendlyUnit.transform.parent.gameObject) == 1 && friendlyUC.currentHealth < friendlyUC.totalHealth)
+                    {
+                        adjacentFriendlyInjuredUnits++;
+                    }
+                }
+
+                if (adjacentFriendlyInjuredUnits > 1)
+                {
+                    clericController.UseSpecialAbility();
+                }
+            }
+            else
+            {
+                GameObject selectedTile = CalculateHealUtility(cleric);
+
+                if (selectedTile != null)
+                {
+                    clericController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
+                    clericController.Heal();
+                }
+                else
+                {
+                    selectedTile = CalculateAttackUtility(cleric);
+
+                    if (selectedTile != null)
+                    {
+                        clericController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
+                        clericController.Attack();
+                    }
+                }
+            }
+        }
+
+        private void PerformHorsemanAction(GameObject horseman)
+        {
+            UnitController horsemanController = horseman.GetComponent<UnitController>();
+            GameObject selectedTile = CalculateAttackUtility(horseman);
+
+            if (horsemanController.remainingSpecialAbilityCooldown == 0 && selectedTile == null)
+            {
+                horsemanController.attackRange++;
+                selectedTile = CalculateAttackUtility(horseman);
+                horsemanController.attackRange--;
+                if (selectedTile != null)
+                {
+                    horsemanController.UseSpecialAbility();
+                    horsemanController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
+                    horsemanController.Attack();
+                }
+            }
+            else if (selectedTile != null)
+            {
+                horsemanController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
+                horsemanController.Attack();
+            }
+        }
+
+        private void PerformSiegeAction(GameObject siege)
+        {
+            UnitController siegeController = siege.GetComponent<UnitController>();
+            GameObject selectedTile = CalculateAttackUtility(siege);
+
+            if (siegeController.remainingSpecialAbilityCooldown == 0 && selectedTile == null)
+            {
+                siegeController.UseSpecialAbility();
+                selectedTile = CalculateAttackUtility(siege);
+                siegeController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
+                siegeController.Attack();
+            }
+            else if (selectedTile != null)
+            {
+                siegeController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
+                siegeController.Attack();
+            }
         }
 
         private GameObject CalculateMoveUtility(GameObject unit)        
@@ -528,7 +653,7 @@ namespace Capstone
             GameObject finalTile;
             GameObject tile = unit.transform.parent.gameObject;
             finalTile = tile;
-            float maxUtility = -1000;
+            float maxUtility = Mathf.NegativeInfinity;
             foreach(GameObject currentTile in FindPossibleMoveTiles(tile, unitController.currentMovementRange))
             {
                 float currentUtility = uc.Calculate(currentTile, unitController);
@@ -541,16 +666,16 @@ namespace Capstone
             return finalTile;
         }
 
-        private GameObject CalculateAttackUtility(GameObject enemy)
+        private GameObject CalculateAttackUtility(GameObject unit)
         {
             GameObject finalTile;
-            GameObject tile = enemy.transform.parent.gameObject;    
+            GameObject tile = unit.transform.parent.gameObject;    
             finalTile = null;
-            float minHealth = 1000;
-            foreach (GameObject currentTile in FindPossibleAttackTiles(tile, enemy.GetComponent<UnitController>().attackRange))
+            float minHealth = Mathf.Infinity;
+            foreach (GameObject currentTile in FindPossibleActionTiles(tile, unit.GetComponent<UnitController>().attackRange, false))
             {
                 GameObject target = TileManager.FindSpecificChildByTag(currentTile, "Unit");
-                if(target != null)
+                if (target != null)
                 {
                     UnitController tUC = target.GetComponent<UnitController>();
                     if (tUC.currentHealth < minHealth && tUC.currentHealth > 0)
@@ -559,7 +684,29 @@ namespace Capstone
                         finalTile = currentTile;
                     }
                 }
-            
+            }
+
+            return finalTile;
+        }
+
+        private GameObject CalculateHealUtility(GameObject unit)
+        {
+            GameObject finalTile;
+            GameObject tile = unit.transform.parent.gameObject;
+            finalTile = null;
+            float minRatio = 1;
+            foreach (GameObject currentTile in FindPossibleActionTiles(tile, unit.GetComponent<UnitController>().attackRange, true))
+            {
+                GameObject target = TileManager.FindSpecificChildByTag(currentTile, "Unit");
+                if (target != null)
+                {
+                    UnitController tUC = target.GetComponent<UnitController>();
+                    if (((float)tUC.currentHealth / tUC.totalHealth) < minRatio && tUC.currentHealth > 0)
+                    {
+                        minRatio = (float)tUC.currentHealth / tUC.totalHealth;
+                        finalTile = currentTile;
+                    }
+                }
             }
 
             return finalTile;
@@ -594,7 +741,7 @@ namespace Capstone
             return tiles;
         }
 
-        private List<GameObject> FindPossibleAttackTiles(GameObject tile, int attackRange)
+        private List<GameObject> FindPossibleActionTiles(GameObject tile, int attackRange, bool healing)
         {
             List<GameObject> tiles = new List<GameObject>();
 
@@ -606,24 +753,25 @@ namespace Capstone
                 {
                     int horizontalDistanceFromSelectedTile = Mathf.Abs(candidateTileIndex % LevelGenerator.gridLength - selectedTileIndex % LevelGenerator.gridLength);
                     GameObject candidate = TileManager.FindSpecificChildByTag(map.transform.GetChild(candidateTileIndex).gameObject, "Unit");
-                    // Further limit the possible range based on how many tiles would have to be traveled for an attack to reach any particular point within the square box.
-                    // A tile is an acceptable attack location if it is vertically located within the box.
+                    // Further limit the possible range based on how many tiles would have to be traveled for an action to reach any particular point within the square box.
+                    // A tile is an acceptable action location if it is vertically located within the box.
                     if (candidateTileIndex % LevelGenerator.gridLength >= selectedTileIndex % LevelGenerator.gridLength && Mathf.Abs(candidateTileIndex - (selectedTileIndex + horizontalDistanceFromSelectedTile)) <= attackRange * LevelGenerator.gridLength)
                     {
-                        if (candidate != null && candidate.GetComponent<UnitController>().allegiance == 0)
+                        if (candidate != null && ((!healing && candidate.GetComponent<UnitController>().allegiance == 0) || (healing && candidate.GetComponent<UnitController>().allegiance == 1)))
                         {
                             tiles.Add(map.transform.GetChild(candidateTileIndex).gameObject);
                         }
                     }
                     else if (candidateTileIndex % LevelGenerator.gridLength < selectedTileIndex % LevelGenerator.gridLength && Mathf.Abs(candidateTileIndex - (selectedTileIndex - horizontalDistanceFromSelectedTile)) <= attackRange * LevelGenerator.gridLength)
                     {
-                        if (candidate != null && candidate.GetComponent<UnitController>().allegiance == 0)
+                        if (candidate != null && ((!healing && candidate.GetComponent<UnitController>().allegiance == 0) || (healing && candidate.GetComponent<UnitController>().allegiance == 1)))
                         {
                             tiles.Add(map.transform.GetChild(candidateTileIndex).gameObject);
                         }
                     }
                 }
             }
+
             return tiles;
         }
     }

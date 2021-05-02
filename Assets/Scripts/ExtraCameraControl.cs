@@ -135,25 +135,25 @@ namespace Capstone
 
             Vector2 mousePos = Input.mousePosition;
             //move right
-            if (mousePos.x > Screen.width * 0.98f && mousePos.x <= Screen.width)
+            if (mousePos.x == Screen.width - 1)
             {
                 transform.localPosition += (-transform.forward + transform.right) * panSpeed;
                 ClearFocusTile();
             }
             //move left
-            if (mousePos.x < Screen.width * 0.02f && mousePos.x >= 0)
+            if (mousePos.x == 0)
             {
                 transform.localPosition += (transform.forward - transform.right) * panSpeed;
                 ClearFocusTile();
             }
             //move up
-            if (mousePos.y > Screen.height * 0.98f && mousePos.y <= Screen.height + 1)
+            if (mousePos.y == Screen.height)
             {
                 transform.localPosition += (transform.right + transform.forward) * panSpeed;
                 ClearFocusTile();
             }
             //move down
-            if (mousePos.y < Screen.height * 0.02f && mousePos.y >= 0)
+            if (mousePos.y == 1)
             {
                 transform.localPosition += (-transform.right - transform.forward) * panSpeed;
                 ClearFocusTile();
