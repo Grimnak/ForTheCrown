@@ -25,14 +25,25 @@ public class UtilityCalculator
         moveRange = unit.defaultMovementRange;
         attackRange = unit.attackRange;
         totalUtility = 0;
-        totalUtility += Teammates(tile);
-        totalUtility += Enemies(tile);
+
+        if (enemy.unitType.CompareTo("Cleric") == 0)
+        {
+            totalUtility += Teammates(tile) * 3;
+        }
+        else
+        {
+            totalUtility += Teammates(tile);
+            totalUtility += Enemies(tile);
+        }
+
         totalUtility -= AvoidSiege(tile);
         totalUtility -= MoveTowardsEnemies(tile);
-        if (enemy.unitType.CompareTo("Archer") == 0)
+
+        if (enemy.unitType.CompareTo("Archer") == 0 && enemyTiles.Count > 0)
         {
             totalUtility += (ArcherEnemies(tile, enemyTiles) * 2);
         }
+
         return totalUtility;
     }
     
@@ -115,7 +126,7 @@ public class UtilityCalculator
 
     }
 
-    float AvoidSiege (GameObject tile)
+    float AvoidSiege(GameObject tile)
     {
             if (tile.transform.Find("Incoming_Effect").GetComponent<ParticleSystem>().isPlaying)
             {

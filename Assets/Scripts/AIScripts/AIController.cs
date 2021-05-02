@@ -557,6 +557,11 @@ namespace Capstone
                 archerController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
                 archerController.Attack();
             }
+            else if (selectedTile != null)
+            {
+                archerController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
+                archerController.Attack();
+            }
         }
 
         private void PerformClericAction(GameObject cleric)
@@ -582,7 +587,8 @@ namespace Capstone
                     clericController.UseSpecialAbility();
                 }
             }
-            else
+            
+            if (!clericController.hasActed)
             {
                 GameObject selectedTile = CalculateHealUtility(cleric);
 
@@ -654,6 +660,7 @@ namespace Capstone
             GameObject tile = unit.transform.parent.gameObject;
             finalTile = tile;
             float maxUtility = Mathf.NegativeInfinity;
+
             foreach(GameObject currentTile in FindPossibleMoveTiles(tile, unitController.currentMovementRange))
             {
                 float currentUtility = uc.Calculate(currentTile, unitController);
@@ -663,6 +670,7 @@ namespace Capstone
                     finalTile = currentTile;
                 }
             }
+
             return finalTile;
         }
 
@@ -672,6 +680,7 @@ namespace Capstone
             GameObject tile = unit.transform.parent.gameObject;    
             finalTile = null;
             float minHealth = Mathf.Infinity;
+
             foreach (GameObject currentTile in FindPossibleActionTiles(tile, unit.GetComponent<UnitController>().attackRange, false))
             {
                 GameObject target = TileManager.FindSpecificChildByTag(currentTile, "Unit");
@@ -695,6 +704,7 @@ namespace Capstone
             GameObject tile = unit.transform.parent.gameObject;
             finalTile = null;
             float minRatio = 1;
+
             foreach (GameObject currentTile in FindPossibleActionTiles(tile, unit.GetComponent<UnitController>().attackRange, true))
             {
                 GameObject target = TileManager.FindSpecificChildByTag(currentTile, "Unit");
