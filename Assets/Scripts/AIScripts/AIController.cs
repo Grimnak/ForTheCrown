@@ -132,14 +132,14 @@ namespace Capstone
                     stagingArmy.Clear();
 
                     // Update next wave spawn location.
-                    if (sideToSpawnOn == 3)
-                    {
-                        sideToSpawnOn = 0;
-                    }
-                    else
-                    {
-                        sideToSpawnOn++;
-                    }
+                    //if (sideToSpawnOn == 3)
+                    //{
+                    //    sideToSpawnOn = 0;
+                    //}
+                    //else
+                    //{
+                    //    sideToSpawnOn++;
+                    //}
 
 
                     Spawn(true);
@@ -175,12 +175,12 @@ namespace Capstone
 
                 if (inStagingArea)
                 {
-                    List<int> validTileIndices = DetermineNextWaveLocation(sideToSpawnOn);
-                    spawnTile = stagingArea.transform.GetChild(validTileIndices[Random.Range(0, validTileIndices.Count)]).gameObject;
+                    //List<int> validTileIndices = DetermineNextWaveLocation(sideToSpawnOn);
+                    spawnTile = stagingArea.transform.GetChild(Random.Range(0, stagingArea.transform.childCount)).gameObject;
 
                     while (TileManager.FindSpecificChildByTag(spawnTile, "Unit") != null)
                     {
-                        spawnTile = stagingArea.transform.GetChild(validTileIndices[Random.Range(0, validTileIndices.Count)]).gameObject;
+                        spawnTile = stagingArea.transform.GetChild(Random.Range(0, stagingArea.transform.childCount)).gameObject;
                     }
                 }
                 else
@@ -354,52 +354,51 @@ namespace Capstone
         {
             int waveCount = GameLogicManager.Instance.endlessWaveClearCount;
             int popCap = 2 * (waveCount + 1) + 4;       //Arbitrary function to make endless feel quicker
-            if (waveCount >= 6)
-            {
-                int siege = Random.Range(0, 15);
-                siege /= 10;
-
-                for (int i = 0; i < siege; i++)
-                {
-                    army.Add(4);
-                    popCap -= Global.UnitPopulationCost.siege;
-                }
-            }
-            if (waveCount >= 5)
-            {
-                int horse = Random.Range(5, 20);
-                horse /= 10;
-
-                for (int i = 0; i < horse; i++)
-                {
-                    army.Add(5);
-                    popCap -= Global.UnitPopulationCost.horseman;
-                }
-            }
-            if (waveCount >= 3)
-            {
-                int cleric = Random.Range(10, 25);
-                cleric /= 10;
-
-                for (int i = 0; i < cleric; i++)
-                {
-                    army.Add(3);
-
-                    popCap -= Global.UnitPopulationCost.cleric;
-                }
-            }
             if (waveCount >= 2)
             {
-                int archer = Random.Range(5, 35);
+                int archer = Random.Range(15, 46);
                 archer /= 10;
 
                 for (int i = 0; i < archer; i++)
                 {
-                    army.Add(2);
-                    popCap -= Global.UnitPopulationCost.archer;
+                    if (popCap >= Global.UnitPopulationCost.archer) { popCap -= Global.UnitPopulationCost.archer; army.Add(2); }
+                    else break;
                 }
             }
-            while (popCap > 0 && army.Count < 10)      
+            if (waveCount >= 4)
+            {
+                int horse = Random.Range(15, 36);
+                horse /= 10;
+
+                for (int i = 0; i < horse; i++)
+                {
+                    if (popCap >= Global.UnitPopulationCost.horseman) { popCap -= Global.UnitPopulationCost.archer; army.Add(5); }
+                    else break;
+                }
+            }
+            if (waveCount >= 3)
+            {
+                int cleric = Random.Range(15, 26);
+                cleric /= 10;
+
+                for (int i = 0; i < cleric; i++)
+                {
+                    if (popCap >= Global.UnitPopulationCost.cleric) { popCap -= Global.UnitPopulationCost.archer; army.Add(3); }
+                    else break;
+                }
+            }
+            if (waveCount >= 5)
+            {
+                int siege = Random.Range(10, 26);
+                siege /= 10;
+
+                for (int i = 0; i < siege; i++)
+                {
+                    if (popCap >= Global.UnitPopulationCost.siege) { popCap -= Global.UnitPopulationCost.archer; army.Add(4); }
+                    else break;
+                }
+            }
+            while (popCap > 0)      
             {
                 army.Add(1);
                 popCap -= Global.UnitPopulationCost.knight;

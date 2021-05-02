@@ -26,7 +26,7 @@ public class PopulationSelectLogicManager : MonoBehaviour
     void Start()
     {
         allegiance = PhotonNetwork.IsConnected ? (PhotonNetwork.IsMasterClient ? 0 : 1) : 0;
-        populationPointsToSpend = 20;  // we'll eventually attach this to a slider menu option
+        populationPointsToSpend = 25;  // we'll eventually attach this to a slider menu option
         ObjectManager.DontDestroyOnLoad(gameObject);
 
         AddUnitAction = new UnityAction<string>(OnClick);
