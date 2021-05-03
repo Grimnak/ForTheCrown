@@ -285,7 +285,6 @@ namespace Capstone
             {
                 uc.PromoteSingleHealOption();
             }
-            if (x == 2 * uc.maxPromotions - 1) uc.PromoteFinalTime();
         }
 
         public void SpecialAction(int idx)
@@ -299,9 +298,9 @@ namespace Capstone
             if (selectedAction == 0 && selectedUnitController != null)
             {
                 // lots of room for optimization here, just hacking this in for now. revisit if performance sucks.
-            PlayerController pc = GameLogicManager.Instance.controllers[GameLogicManager.Instance.myID] as PlayerController;
-            if (PhotonNetwork.IsConnected) pc.PV.RPC("Special", RpcTarget.All, TileManager.currentlySelectedTile.name);
-            else pc.Special(TileManager.currentlySelectedTile.name);    
+                PlayerController pc = GameLogicManager.Instance.controllers[GameLogicManager.Instance.myID] as PlayerController;
+                if (PhotonNetwork.IsConnected) pc.PV.RPC("Special", RpcTarget.All, TileManager.currentlySelectedTile.name);
+                else pc.Special(TileManager.currentlySelectedTile.name);    
             }
             actionButtons[selectedAction].interactable = false;
         }
@@ -328,8 +327,6 @@ namespace Capstone
                 eventData.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 List<RaycastResult> results = new List<RaycastResult>();
                 EventSystem.current.RaycastAll(eventData, results);
-                for (int i = 0; i < results.Count; ++i)
-                    Debug.Log("hit: " + results[i].gameObject.name);
                 return results.Count > 0;
             }
             return false;

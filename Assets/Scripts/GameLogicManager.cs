@@ -210,7 +210,8 @@ namespace Capstone
                 endlessWaveClearCount++;
                 endlessPopulationPoints += 1;
 
-                if (endlessPopulationPoints > 1)
+                // Only show the unit purchasing shop if at least the cheapest unit (knight) is affordable.
+                if (endlessPopulationPoints >= Global.UnitPopulationCost.knight)
                 {
                     PlayerController pc = controllers[0] as PlayerController;
                     isReadyToPlay = false;
@@ -456,10 +457,10 @@ namespace Capstone
             }
         }
 
-        //temporary solution for spawning units in endless mode
+        //temporary solution for spawning unit sprites in endless mode
         public void SpawnEndlessModeUnits(PlayerController pc)
         {
-            string[] units = { "Knight", "Archer", "Cleric", "Siege" };
+            string[] units = { "Knight", "Archer", "Cleric", "Siege", "Horseman" };
             foreach (string unitName in units)
             {
                 for (int i = 0; i < 8; ++i)

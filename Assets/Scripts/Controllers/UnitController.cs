@@ -267,14 +267,11 @@ namespace Capstone
                     
             if (GameLogicManager.IsMyTurn(pc.allegiance) && currentPromotionPoints >= requiredPromotionPoints && totalPromotions < maxPromotions)
             {
-                
                 return true;
-                
             }
             else
             {
                 return false;
-                
             }
         }
 

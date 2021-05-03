@@ -165,6 +165,12 @@ namespace Capstone
             if (Global.activeGameMode.Equals(Global.ActiveGameMode.endlessMode))
             {
                 army = SpawnEndlessCalc(army);
+
+                // Ensure army size never grows beyond what fits inside map staging area.
+                while (army.Count > GameObject.FindGameObjectWithTag(Global.Tags.staging).transform.childCount)
+                {
+                    army.Remove(army.Count);
+                }
             }
             else
             {
@@ -358,7 +364,7 @@ namespace Capstone
         public List<int> SpawnEndlessCalc(List<int> army)
         {
             int waveCount = GameLogicManager.Instance.endlessWaveClearCount;
-            int popCap = 2 * (waveCount + 1) + 4;       //Arbitrary function to make endless feel quicker
+            int popCap = 2 * (waveCount + 1) + 4;       //Arbitrary addition to make endless feel quicker
             if (waveCount >= 1)
             {
                 int archer = Random.Range(15, 36);
@@ -594,7 +600,7 @@ namespace Capstone
             {
                 GameObject selectedTile = CalculateHealUtility(cleric);
 
-                if (selectedTile != null)
+                if (selectedTile != null && selectedTile != cleric.transform.parent.gameObject)
                 {
                     clericController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
                     clericController.Heal();
