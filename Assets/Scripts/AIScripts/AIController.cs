@@ -241,9 +241,11 @@ namespace Capstone
                 unit.transform.Find("red_team_aura").GetComponent<ParticleSystem>().Play();
             }
 
-            if (GameLogicManager.Instance.endlessWaveClearCount > 7)
+            if (GameLogicManager.Instance.endlessWaveClearCount >= 5)
             {
-                AIEndlessPromPts = GameLogicManager.Instance.endlessWaveClearCount - 7;
+                AIEndlessPromPts = GameLogicManager.Instance.endlessWaveClearCount - 4;
+
+                // Ensure more promotions points are given than can possibly be given to the new wave.
                 if (AIEndlessPromPts > 3 * gameArmy.Count)
                 {
                     AIEndlessPromPts = 3 * gameArmy.Count;
@@ -357,9 +359,9 @@ namespace Capstone
         {
             int waveCount = GameLogicManager.Instance.endlessWaveClearCount;
             int popCap = 2 * (waveCount + 1) + 4;       //Arbitrary function to make endless feel quicker
-            if (waveCount >= 2)
+            if (waveCount >= 1)
             {
-                int archer = Random.Range(15, 46);
+                int archer = Random.Range(15, 36);
                 archer /= 10;
 
                 for (int i = 0; i < archer; i++)
@@ -368,7 +370,7 @@ namespace Capstone
                     else break;
                 }
             }
-            if (waveCount >= 4)
+            if (waveCount >= 3)
             {
                 int horse = Random.Range(15, 36);
                 horse /= 10;
@@ -379,7 +381,7 @@ namespace Capstone
                     else break;
                 }
             }
-            if (waveCount >= 3)
+            if (waveCount >= 2)
             {
                 int cleric = Random.Range(15, 26);
                 cleric /= 10;
@@ -390,7 +392,7 @@ namespace Capstone
                     else break;
                 }
             }
-            if (waveCount >= 5)
+            if (waveCount >= 4)
             {
                 int siege = Random.Range(10, 26);
                 siege /= 10;
