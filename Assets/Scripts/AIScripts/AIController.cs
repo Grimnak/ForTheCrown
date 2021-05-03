@@ -169,7 +169,7 @@ namespace Capstone
                 // Ensure army size never grows beyond what fits inside map staging area.
                 while (army.Count > GameObject.FindGameObjectWithTag(Global.Tags.staging).transform.childCount)
                 {
-                    army.Remove(army.Count);
+                    army.Remove(Random.Range(0, army.Count));
                 }
             }
             else
