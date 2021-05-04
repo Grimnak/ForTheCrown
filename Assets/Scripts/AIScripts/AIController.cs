@@ -105,11 +105,8 @@ namespace Capstone
                         }
                         else 
                         {
-                            if (!GameLogicManager.animationLock)
-                            {
-                                GameLogicManager.Instance.NextTurn(); // AI Turn is over.
-                                movePhase = true;
-                            }
+                            GameLogicManager.Instance.NextTurn(); // AI Turn is over.
+                            movePhase = true;
                         }
                     }
                 }
@@ -367,7 +364,7 @@ namespace Capstone
             int popCap = 2 * (waveCount + 1) + 4;       //Arbitrary addition to make endless feel quicker
             if (waveCount >= 1)
             {
-                int archer = Random.Range(15, 36);
+                int archer = Random.Range(15, 35);
                 archer /= 10;
 
                 for (int i = 0; i < archer; i++)
@@ -378,38 +375,38 @@ namespace Capstone
             }
             if (waveCount >= 3)
             {
-                int horse = Random.Range(15, 36);
+                int horse = Random.Range(15, 35);
                 horse /= 10;
 
                 for (int i = 0; i < horse; i++)
                 {
-                    if (popCap >= Global.UnitPopulationCost.horseman) { popCap -= Global.UnitPopulationCost.archer; army.Add(5); }
+                    if (popCap >= Global.UnitPopulationCost.horseman) { popCap -= Global.UnitPopulationCost.horseman; army.Add(5); }
                     else break;
                 }
             }
             if (waveCount >= 2)
             {
-                int cleric = Random.Range(15, 26);
+                int cleric = Random.Range(15, 25);
                 cleric /= 10;
 
                 for (int i = 0; i < cleric; i++)
                 {
-                    if (popCap >= Global.UnitPopulationCost.cleric) { popCap -= Global.UnitPopulationCost.archer; army.Add(3); }
+                    if (popCap >= Global.UnitPopulationCost.cleric) { popCap -= Global.UnitPopulationCost.cleric; army.Add(3); }
                     else break;
                 }
             }
             if (waveCount >= 4)
             {
-                int siege = Random.Range(10, 26);
+                int siege = Random.Range(5, 15);
                 siege /= 10;
 
                 for (int i = 0; i < siege; i++)
                 {
-                    if (popCap >= Global.UnitPopulationCost.siege) { popCap -= Global.UnitPopulationCost.archer; army.Add(4); }
+                    if (popCap >= Global.UnitPopulationCost.siege) { popCap -= Global.UnitPopulationCost.siege; army.Add(4); }
                     else break;
                 }
             }
-            while (popCap > 0)      
+            while (popCap >= Global.UnitPopulationCost.knight)      
             {
                 army.Add(1);
                 popCap -= Global.UnitPopulationCost.knight;
@@ -600,7 +597,7 @@ namespace Capstone
             {
                 GameObject selectedTile = CalculateHealUtility(cleric);
 
-                if (selectedTile != null && selectedTile != cleric.transform.parent.gameObject)
+                if (selectedTile != null)
                 {
                     clericController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
                     clericController.Heal();
@@ -645,16 +642,15 @@ namespace Capstone
         private void PerformSiegeAction(GameObject siege)
         {
             UnitController siegeController = siege.GetComponent<UnitController>();
-            GameObject selectedTile = CalculateAttackUtility(siege);
+            GameObject selectedTile = CalculateSiegeAttackUtility(siege);
 
             if (siegeController.remainingSpecialAbilityCooldown == 0 && selectedTile == null)
             {
                 siegeController.UseSpecialAbility();
-                selectedTile = CalculateAttackUtility(siege);
-                siegeController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
-                siegeController.Attack();
+                selectedTile = CalculateSiegeAttackUtility(siege);
             }
-            else if (selectedTile != null)
+            
+            if (selectedTile != null)
             {
                 siegeController.target = TileManager.FindSpecificChildByTag(selectedTile, "Unit");
                 siegeController.Attack();
@@ -706,6 +702,52 @@ namespace Capstone
             return finalTile;
         }
 
+        private GameObject CalculateSiegeAttackUtility(GameObject siege)
+        {
+            GameObject finalTile;
+            GameObject tile = siege.transform.parent.gameObject;
+            finalTile = null;
+            float maxEnemyUnits = Mathf.NegativeInfinity;
+
+            foreach (GameObject currentTile in FindPossibleActionTiles(tile, siege.GetComponent<UnitController>().attackRange, false))
+            {
+                GameObject target = TileManager.FindSpecificChildByTag(currentTile, "Unit");
+                int nearbyFriendlyUnits = 0;
+                int nearbyEnemyUnits = 1;  // starts at 1 because primary target is always an enemy
+
+                if (target != null)
+                {
+                    for (int neighboringTileIndex = 0; neighboringTileIndex < LevelGenerator.map.transform.childCount; neighboringTileIndex++)
+                    {
+                        GameObject neighboringTile = LevelGenerator.map.transform.GetChild(neighboringTileIndex).gameObject;
+                        if (TileManager.CombatDistanceBetweenTiles(neighboringTile, currentTile) == 1)
+                        {
+                            GameObject neighboringUnit = TileManager.FindSpecificChildByTag(neighboringTile, "Unit");
+                            if (neighboringUnit != null)
+                            {
+                                if (gameArmy.Contains(neighboringUnit))
+                                {
+                                    nearbyFriendlyUnits++;
+                                }
+                                else if (GameLogicManager.Instance.controllers[0].gameArmy.Contains(neighboringUnit))
+                                {
+                                    nearbyEnemyUnits++;
+                                }
+                            }
+                        }
+                    }
+
+                    if (nearbyEnemyUnits > nearbyFriendlyUnits && nearbyEnemyUnits > maxEnemyUnits)
+                    {
+                        maxEnemyUnits = nearbyEnemyUnits;
+                        finalTile = currentTile;
+                    }
+                }
+            }
+
+            return finalTile;
+        }
+
         private GameObject CalculateHealUtility(GameObject unit)
         {
             GameObject finalTile;
@@ -716,7 +758,7 @@ namespace Capstone
             foreach (GameObject currentTile in FindPossibleActionTiles(tile, unit.GetComponent<UnitController>().attackRange, true))
             {
                 GameObject target = TileManager.FindSpecificChildByTag(currentTile, "Unit");
-                if (target != null)
+                if (target != null && currentTile != tile)
                 {
                     UnitController tUC = target.GetComponent<UnitController>();
                     if (((float)tUC.currentHealth / tUC.totalHealth) < minRatio && tUC.currentHealth > 0)
