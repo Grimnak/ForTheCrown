@@ -577,9 +577,9 @@ namespace Capstone
             {
                 int adjacentFriendlyInjuredUnits = 0;
 
-                for (int friendlyUnitIndex = 0; friendlyUnitIndex < GameLogicManager.Instance.controllers[GameLogicManager.Instance.otherID].gameArmy.Count; friendlyUnitIndex++)
+                for (int friendlyUnitIndex = 0; friendlyUnitIndex < gameArmy.Count; friendlyUnitIndex++)
                 {
-                    GameObject friendlyUnit = GameLogicManager.Instance.controllers[GameLogicManager.Instance.otherID].gameArmy[friendlyUnitIndex];
+                    GameObject friendlyUnit = gameArmy[friendlyUnitIndex];
                     UnitController friendlyUC = friendlyUnit.GetComponent<UnitController>();
                     if (TileManager.CombatDistanceBetweenTiles(cleric, friendlyUnit.transform.parent.gameObject) == 1 && friendlyUC.currentHealth < friendlyUC.totalHealth)
                     {
